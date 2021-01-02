@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +8,8 @@
    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Poppins&display=swap" rel="stylesheet">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" defer></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" defer></script>
-   <script src="./Animations/script.js" defer></script>
-   <link rel="stylesheet" href="./Styling/style.css">
+   <script src="{% static 'home/script.js' %}" defer></script>
+   <link rel="stylesheet" href="{% static 'style.css' %}">
    <title>Photogen - Home</title>
 </head>
 <body>
@@ -26,7 +27,7 @@
                      <h1>Photogen</h1>
                   </div>
                   <div class="nav-cart-cont">
-                     <img src="./Images/Svg/cart.svg" alt="a cart icon" class="nav-cart">
+                     <img src="{% static 'imgs/Svg/cart.svg' %}" alt="a cart icon" class="nav-cart">
                   </div>
                </div>
                <div class="nav-menu">
@@ -41,11 +42,11 @@
                   <li><a href="#">Drones</a></li>
                   <li><a href="#">Recorders</a></li>
                   <li><a href="#">Lighting</a></li>
-                  <img src="./Images/Svg/Back.svg" alt="an arrow icon" class="nav-back">
+                  <img src="{% static 'imgs/Svg/Back.svg' %}" alt="an arrow icon" class="nav-back">
                </div>
                <div class="sign-in">
                   <div class="sign-in-sep"></div>
-                  <img src="./Images/Svg/go-back-signin.svg" alt="an arrow" class="sign-in-back">
+                  <img src="{% static 'imgs/Svg/go-back-signin.svg' %}" alt="an arrow" class="sign-in-back">
                   <div class="sign-in-text">
                      <h1>Sign In</h1>
                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, quibusdam!</p>
@@ -62,7 +63,7 @@
                </div>
                <div class="sign-up2">
                   <div class="sign-up-sep"></div>
-                  <img src="./Images/Svg/go-back-signin.svg" alt="an arrow" class="sign-up-back">
+                  <img src="{% static 'imgs/Svg/go-back-signin.svg' %}" alt="an arrow" class="sign-up-back">
                   <div class="sign-up-text">
                      <h1>Sign Up</h1>
                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, quibusdam!</p>
@@ -102,8 +103,8 @@
                      </ul>
                   </div>
                   <div class="nav-c1">
-                     <img src="./Images/Svg/user-regular.svg" alt="a user" class="account-img">
-                     <img src="./Images/Svg/cart.svg" alt="a shopping cart" class="nav-c1-cart">
+                     <img src="{% static 'imgs/Svg/user-regular.svg' %}" alt="a user" class="account-img">
+                     <img src="{% static 'imgs/Svg/cart.svg' %}" alt="a shopping cart" class="nav-c1-cart">
                   </div>
                </div>
             </div>
@@ -114,8 +115,8 @@
             <div class="lp">
                <h1>Photogen</h1>
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus deserunt illum tempore? Vitae?</p>
-               <img src="./Images/Svg/scroll.svg" alt="a scroll icon" class="lp-scroll">
-               <img src="./Images/Png/h-lp-img.png" alt="a camera image" class="lp-img">
+               <img src="{% static 'imgs/Svg/scroll.svg' %}" alt="a scroll icon" class="lp-scroll">
+               <img src="{% static 'imgs/Png/h-lp-img.png' %}" alt="a camera image" class="lp-img">
             </div>
          </div>
       </section> 
@@ -133,9 +134,9 @@
       <section>
          <div class="section-4">
             <div class="test">
-               <img src="./Images/Svg/quote-left.svg" alt="a quote" class="test-q-l">
-               <img src="./Images/Svg/quote-right.svg" alt="a quote" class="test-q-r">
-               <img src="./Images/Svg/image.svg" alt="an image" class="test-img">
+               <img src="{% static 'imgs/Svg/quote-left.svg' %}" alt="a quote" class="test-q-l">
+               <img src="{% static 'imgs/Svg/quote-right.svg' %}" alt="a quote" class="test-q-r">
+               <img src="{% static 'imgs/Svg/image.svg' %}" alt="an image" class="test-img">
                <p>Erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices tincidunt arcu non sodales neque. Deneeb donec ultrices tellus id.</p>
                <h3>- Peter Johnson</h3>
             </div>
@@ -149,7 +150,7 @@
                   <div class="whyus-sep"></div>
                   <p>Erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices tincidunt arcu non sodales neque. d donec ultrices tincidunt arcu.</p>
                </div>
-               <img src="./Images/Png/whyus-img-min.png" alt="A camera image" class="whyus-img">
+               <img src="{% static 'imgs/Png/whyus-img-min.png' %}" alt="A camera image" class="whyus-img">
             </div>
          </div>
       </section>
@@ -159,7 +160,7 @@
                <h1 class="offers-name">Our Best Offers</h1>
                <div class="offer-card">
                   <div class="offers-img-p">
-                     <img src="./Images/Png/camera-product-min.png" alt="a camera" class="offers-img">
+                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img">
                   </div>
                   <div class="offers-info">
                      <h1>Product Name</h1>
@@ -168,7 +169,7 @@
                </div>
                <div class="offer-card">
                   <div class="offers-img-p">
-                     <img src="./Images/Png/camera-product-min.png" alt="a camera" class="offers-img">
+                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img">
                   </div>
                   <div class="offers-info">
                      <h1>Product Name</h1>
@@ -177,7 +178,7 @@
                </div>
                <div class="offer-card">
                   <div class="offers-img-p">
-                     <img src="./Images/Png/camera-product-min.png" alt="a camera" class="offers-img">
+                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img">
                   </div>
                   <div class="offers-info">
                      <h1>Product Name</h1>
@@ -186,7 +187,7 @@
                </div>
                <div class="offer-card">
                   <div class="offers-img-p">
-                     <img src="./Images/Png/camera-product-min.png" alt="a camera" class="offers-img">
+                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img">
                   </div>
                   <div class="offers-info">
                      <h1>Product Name</h1>
@@ -195,7 +196,7 @@
                </div>
                <div class="offer-card">
                   <div class="offers-img-p">
-                     <img src="./Images/Png/camera-product-min.png" alt="a camera" class="offers-img">
+                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img">
                   </div>
                   <div class="offers-info">
                      <h1>Product Name</h1>
@@ -204,7 +205,7 @@
                </div>
                <div class="offer-card">
                   <div class="offers-img-p">
-                     <img src="./Images/Png/camera-product-min.png" alt="a camera" class="offers-img">
+                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img">
                   </div>
                   <div class="offers-info">
                      <h1>Product Name</h1>
@@ -223,7 +224,7 @@
                   <div class="offers-cards-p1">
                      <div class="offer-card-d">
                         <div class="offers-img-p-d">
-                           <img src="./Images/Png/camera-product-min.png" alt="a camera" class="offers-img-d">
+                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img-d">
                         </div>
                         <div class="offers-info-d">
                            <h1>Product Name</h1>
@@ -232,7 +233,7 @@
                      </div>
                      <div class="offer-card-d">
                         <div class="offers-img-p-d">
-                           <img src="./Images/Png/camera-product-min.png" alt="a camera" class="offers-img-d">
+                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img-d">
                         </div>
                         <div class="offers-info-d">
                            <h1>Product Name</h1>
@@ -241,7 +242,7 @@
                      </div>
                      <div class="offer-card-d">
                         <div class="offers-img-p-d">
-                           <img src="./Images/Png/camera-product-min.png" alt="a camera" class="offers-img-d">
+                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img-d">
                         </div>
                         <div class="offers-info-d">
                            <h1>Product Name</h1>
@@ -252,7 +253,7 @@
                   <div class="offers-cards-p2">
                      <div class="offer-card-d">
                         <div class="offers-img-p-d">
-                           <img src="./Images/Png/camera-product-min.png" alt="a camera" class="offers-img-d">
+                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img-d">
                         </div>
                         <div class="offers-info-d">
                            <h1>Product Name</h1>
@@ -261,7 +262,7 @@
                      </div>
                      <div class="offer-card-d">
                         <div class="offers-img-p-d">
-                           <img src="./Images/Png/camera-product-min.png" alt="a camera" class="offers-img-d">
+                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img-d">
                         </div>
                         <div class="offers-info-d">
                            <h1>Product Name</h1>
@@ -270,7 +271,7 @@
                      </div>
                      <div class="offer-card-d">
                         <div class="offers-img-p-d">
-                           <img src="./Images/Png/camera-product-min.png" alt="a camera" class="offers-img-d">
+                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img-d">
                         </div>
                         <div class="offers-info-d">
                            <h1>Product Name</h1>
@@ -297,9 +298,9 @@
                   <h1 class="f-copy">Copyright © 2020 Photogen</h1>
                </div>
                <div class="f-socials">
-                  <a href="#"><img src="./Images/Svg/facebook-brands (1).svg" alt="facebook icon" class="f-fb"></a>
-                  <a href="#"><img src="./Images/Svg/twitter-brands (1).svg" alt="twitter icon" class="f-twitter"></a>
-                  <a href="#"><img src="./Images/Svg/instagram-brands (1).svg" alt="instagram icon" class="f-ig"></a>
+                  <a href="#"><img src="{% static 'imgs/Svg/facebook-brands (1).svg' %}" alt="facebook icon" class="f-fb"></a>
+                  <a href="#"><img src="{% static 'imgs/Svg/twitter-brands (1).svg' %}" alt="twitter icon" class="f-twitter"></a>
+                  <a href="#"><img src="{% static 'imgs/Svg/instagram-brands (1).svg' %}" alt="instagram icon" class="f-ig"></a>
                </div>
             </div>
          </div>
