@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Poppins&display=swap" rel="stylesheet">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" defer></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" defer></script>
+   <script src="./Animations/list.js" defer></script>
+   <link rel="stylesheet" href="./Styling/style.css">
+   <title>Photogen - Accessories</title>
+</head>
+<body>
+   <div class="cont-a">
+      <header>
+         <nav>
+            <div class="section-1">
+               <div class="nav">
+                  <div class="nav-links">
+                     <div class="burger-menu">
+                        <div class="burger"></div>
+                     </div>
+                  </div>
+                  <div class="nav-logo">
+                     <h1>Photogen</h1>
+                  </div>
+                  <div class="nav-cart-cont">
+                     <img src="./Images/Svg/cart.svg" alt="a cart icon" class="nav-cart">
+                  </div>
+               </div>
+               <div class="nav-menu">
+                  <li><a href="#">Home</a></li>
+                  <li class="link-products">Products</li>
+                  <li><a href="#">Explore</a></li>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#" id="sign-in-link">Sign In</a></li>
+               </div>
+               <div class="nav-products">
+                  <li><a href="#">Cameras</a></li>
+                  <li><a href="#">Drones</a></li>
+                  <li><a href="#">Recorders</a></li>
+                  <li><a href="#">Lighting</a></li>
+                  <img src="./Images/Svg/Back.svg" alt="an arrow icon" class="nav-back">
+               </div>
+               <div class="sign-in">
+                  <div class="sign-in-sep"></div>
+                  <img src="./Images/Svg/go-back-signin.svg" alt="an arrow" class="sign-in-back">
+                  <div class="sign-in-text">
+                     <h1>Sign In</h1>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, quibusdam!</p>
+                     <button type="button" class="sign-ing-button">Register</button>
+                  </div>
+                  <div class="sign-in-input">
+                     <div class="sign-in-input-2">
+                        <input type="email" name="email" id="sign-in-email" placeholder="Email Address" required>
+                        <input type="password" name="password" id="sign-in-password" placeholder="Password" required>
+                        <button type="submit" class="sign-in-input-btn">Log In</button>
+                        <h3><a href="#">Forgot Password?</a></h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="sign-up2">
+                  <div class="sign-up-sep"></div>
+                  <img src="./Images/Svg/go-back-signin.svg" alt="an arrow" class="sign-up-back">
+                  <div class="sign-up-text">
+                     <h1>Sign Up</h1>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, quibusdam!</p>
+                     <button type="button" class="sign-up-button">Log In</button>
+                  </div>
+                  <div class="sign-up-input">
+                     <div class="sign-up-input-2">
+                        <input type="text" name="name" id="sign-up-name" placeholder="Full Name" required>
+                        <input type="email" name="email" id="sign-up-email" placeholder="Email Address" required>
+                        <input type="password" name="password" id="sign-up-password" placeholder="Password" required>
+                        <button type="submit" class="sign-up-input-btn">Register</button>
+                        <h3><a href="#">Forgot Password?</a></h3>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="section-b1">
+               <div class="nav-b">
+                  <div class="nav-b1">
+                     <h1>Photogen</h1>
+                     <ul class="nav-b1-ul">
+                        <li class="nav-b1-li"><a href="#">Home</a></li>
+                        <li class="nav-b1-product">
+                           <a href="#">Products</a>
+                           <div class="dropdown">
+                              <ul>
+                                 <li><a href="#">Cameras</a></li>
+                                 <li><a href="#">Drones</a></li>
+                                 <li><a href="#">Recorders</a></li>
+                                 <li><a href="#">Lighting</a></li>
+                              </ul>
+                           </div>
+                           <div class="dropdown-arrow"></div>
+                        </li>
+                        <li class="nav-b1-li"><a href="#">Explore</a></li>
+                        <li class="nav-b1-li"><a href="#">Support</a></li>
+                     </ul>
+                  </div>
+                  <div class="nav-c1">
+                     <img src="./Images/Svg/user-regular.svg" alt="a user" class="account-img">
+                     <img src="./Images/Svg/cart.svg" alt="a shopping cart" class="nav-c1-cart">
+                  </div>
+               </div>
+            </div>
+         </nav>
+      </header>
+      <section>
+         <div class="section-2a">
+            <div class="lp-a">
+               <h1>Accessories</h1>
+               <p>Cameras + Drones...</p>
+               <img src="./Images/Svg/scroll.svg" alt="a scroll icon" class="lp-a-scroll">
+               <img src="./Images/Png/products-img-min.png" alt="a camera img" class="lp-a-img">
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="section-3a">
+            <div class="products">
+               <div class="products-search">
+                  <input type="text" name="search" class="search-bar" placeholder="Search">
+                  <img src="./Images/Svg/delete.svg" alt="delete icon" class="delete">
+                  <button type="submit" class="search-button">Search</button>
+               </div>
+               <div class="product-card">
+                  <div class="product-img-p">
+                     <img src="./Images/Png/camera-product-min.png" alt="a camera" class="product-img">
+                  </div>
+                  <div class="product-info">
+                     <h1>Product Name</h1>
+                     <h3>$299</h3>
+                  </div>
+               </div>
+               <div class="product-card">
+                  <div class="product-img-p">
+                     <img src="./Images/Png/camera-product-min.png" alt="a camera" class="product-img">
+                  </div>
+                  <div class="product-info">
+                     <h1>Product Name</h1>
+                     <h3>$299</h3>
+                  </div>
+               </div>
+               <div class="product-card">
+                  <div class="product-img-p">
+                     <img src="./Images/Png/camera-product-min.png" alt="a camera" class="product-img">
+                  </div>
+                  <div class="product-info">
+                     <h1>Product Name</h1>
+                     <h3>$299</h3>
+                  </div>
+               </div>
+               <div class="product-card">
+                  <div class="product-img-p">
+                     <img src="./Images/Png/camera-product-min.png" alt="a camera" class="product-img">
+                  </div>
+                  <div class="product-info">
+                     <h1>Product Name</h1>
+                     <h3>$299</h3>
+                  </div>
+               </div>
+               <div class="product-card">
+                  <div class="product-img-p">
+                     <img src="./Images/Png/camera-product-min.png" alt="a camera" class="product-img">
+                  </div>
+                  <div class="product-info">
+                     <h1>Product Name</h1>
+                     <h3>$299</h3>
+                  </div>
+               </div>
+               <div class="product-card">
+                  <div class="product-img-p">
+                     <img src="./Images/Png/camera-product-min.png" alt="a camera" class="product-img">
+                  </div>
+                  <div class="product-info">
+                     <h1>Product Name</h1>
+                     <h3>$299</h3>
+                  </div>
+               </div>
+               <div class="product-card">
+                  <div class="product-img-p">
+                     <img src="./Images/Png/camera-product-min.png" alt="a camera" class="product-img">
+                  </div>
+                  <div class="product-info">
+                     <h1>Product Name</h1>
+                     <h3>$299</h3>
+                  </div>
+               </div>
+               <div class="product-card">
+                  <div class="product-img-p">
+                     <img src="./Images/Png/camera-product-min.png" alt="a camera" class="product-img">
+                  </div>
+                  <div class="product-info">
+                     <h1>Product Name</h1>
+                     <h3>$299</h3>
+                  </div>
+               </div>
+               <div class="product-card">
+                  <div class="product-img-p">
+                     <img src="./Images/Png/camera-product-min.png" alt="a camera" class="product-img">
+                  </div>
+                  <div class="product-info">
+                     <h1>Product Name</h1>
+                     <h3>$299</h3>
+                  </div>
+               </div>
+               <div class="product-card-d-p">
+                  <div class="products-card-d-column">
+                     <div class="product-card-d">
+                        <div class="product-img-p">
+                           <img src="./Images/Png/camera-product-min.png" alt="a camera" class="product-img">
+                        </div>
+                        <div class="product-info">
+                           <h1>Product Name</h1>
+                           <h3>$299</h3>
+                        </div>
+                     </div>
+                     <div class="product-card-d">
+                        <div class="product-img-p">
+                           <img src="./Images/Png/camera-product-min.png" alt="a camera" class="product-img">
+                        </div>
+                        <div class="product-info">
+                           <h1>Product Name</h1>
+                           <h3>$299</h3>
+                        </div>
+                     </div>
+                     <div class="product-card-d">
+                        <div class="product-img-p">
+                           <img src="./Images/Png/camera-product-min.png" alt="a camera" class="product-img">
+                        </div>
+                        <div class="product-info">
+                           <h1>Product Name</h1>
+                           <h3>$299</h3>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="products-card-d-column">
+                     <div class="product-card-d">
+                        <div class="product-img-p">
+                           <img src="./Images/Png/camera-product-min.png" alt="a camera" class="product-img">
+                        </div>
+                        <div class="product-info">
+                           <h1>Product Name</h1>
+                           <h3>$299</h3>
+                        </div>
+                     </div>
+                     <div class="product-card-d">
+                        <div class="product-img-p">
+                           <img src="./Images/Png/camera-product-min.png" alt="a camera" class="product-img">
+                        </div>
+                        <div class="product-info">
+                           <h1>Product Name</h1>
+                           <h3>$299</h3>
+                        </div>
+                     </div>
+                     <div class="product-card-d">
+                        <div class="product-img-p">
+                           <img src="./Images/Png/camera-product-min.png" alt="a camera" class="product-img">
+                        </div>
+                        <div class="product-info">
+                           <h1>Product Name</h1>
+                           <h3>$299</h3>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="products-card-d-column">
+                     <div class="product-card-d">
+                        <div class="product-img-p">
+                           <img src="./Images/Png/camera-product-min.png" alt="a camera" class="product-img">
+                        </div>
+                        <div class="product-info">
+                           <h1>Product Name</h1>
+                           <h3>$299</h3>
+                        </div>
+                     </div>
+                     <div class="product-card-d">
+                        <div class="product-img-p">
+                           <img src="./Images/Png/camera-product-min.png" alt="a camera" class="product-img">
+                        </div>
+                        <div class="product-info">
+                           <h1>Product Name</h1>
+                           <h3>$299</h3>
+                        </div>
+                     </div>
+                     <div class="product-card-d">
+                        <div class="product-img-p">
+                           <img src="./Images/Png/camera-product-min.png" alt="a camera" class="product-img">
+                        </div>
+                        <div class="product-info">
+                           <h1>Product Name</h1>
+                           <h3>$299</h3>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="pagination">
+                  <img src="./Images/Svg/caret-left-solid.svg" alt="an arrow" class="pag-left">
+                  <h3>1</h3>
+                  <h3>2</h3>
+                  <h3>3</h3>
+                  <h3>...</h3>
+                  <img src="./Images/Svg/caret-right-solid.svg" alt="an arrow" class="pag-right">
+               </div>
+            </div>
+         </div>
+      </section>
+      <footer>
+         <div class="section-4a">
+            <div class="footer">
+               <div class="f-info">
+                  <h1 class="f-address">Address: 215, Rough st, ag21 h4g</h1>
+                  <h1 class="f-phone">0653 354 6568</h1>
+                  <h1 class="f-email">Photogen@gmail.com</h1>
+               </div>
+               <div class="f-other">
+                  <h1 class="f-imgs">Images from Pexel/Unsplashed</h1>
+                  <h1 class="f-fonts">Icons from Fontawsome</h1>
+                  <h1 class="f-copy">Copyright © 2020 Photogen</h1>
+               </div>
+               <div class="f-socials">
+                  <a href="#"><img src="./Images/Svg/facebook-brands (1).svg" alt="facebook icon" class="f-fb"></a>
+                  <a href="#"><img src="./Images/Svg/twitter-brands (1).svg" alt="twitter icon" class="f-twitter"></a>
+                  <a href="#"><img src="./Images/Svg/instagram-brands (1).svg" alt="instagram icon" class="f-ig"></a>
+               </div>
+            </div>
+         </div>
+      </footer>
+   </div>
+</body>
+</html>

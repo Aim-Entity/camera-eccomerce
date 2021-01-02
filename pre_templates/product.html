@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Poppins&display=swap" rel="stylesheet">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" defer></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" defer></script>
+   <script src="./Animations/product.js" defer></script>
+   <link rel="stylesheet" href="./Styling/style.css">
+   <title>Photogen - Product Name</title>
+</head>
+<body>
+   <div class="cont-p">
+      <header>
+         <nav>
+            <div class="section-1">
+               <div class="nav">
+                  <div class="nav-links">
+                     <div class="burger-menu">
+                        <div class="burger"></div>
+                     </div>
+                  </div>
+                  <div class="nav-logo">
+                     <h1>Photogen</h1>
+                  </div>
+                  <div class="nav-cart-cont">
+                     <img src="./Images/Svg/cart.svg" alt="a cart icon" class="nav-cart">
+                  </div>
+               </div>
+               <div class="nav-menu">
+                  <li><a href="#">Home</a></li>
+                  <li class="link-products">Products</li>
+                  <li><a href="#">Explore</a></li>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#" id="sign-in-link">Sign In</a></li>
+               </div>
+               <div class="nav-products">
+                  <li><a href="#">Cameras</a></li>
+                  <li><a href="#">Drones</a></li>
+                  <li><a href="#">Recorders</a></li>
+                  <li><a href="#">Lighting</a></li>
+                  <img src="./Images/Svg/Back.svg" alt="an arrow icon" class="nav-back">
+               </div>
+               <div class="sign-in">
+                  <div class="sign-in-sep"></div>
+                  <img src="./Images/Svg/go-back-signin.svg" alt="an arrow" class="sign-in-back">
+                  <div class="sign-in-text">
+                     <h1>Sign In</h1>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, quibusdam!</p>
+                     <button type="button" class="sign-ing-button">Register</button>
+                  </div>
+                  <div class="sign-in-input">
+                     <div class="sign-in-input-2">
+                        <input type="email" name="email" id="sign-in-email" placeholder="Email Address" required>
+                        <input type="password" name="password" id="sign-in-password" placeholder="Password" required>
+                        <button type="submit" class="sign-in-input-btn">Log In</button>
+                        <h3><a href="#">Forgot Password?</a></h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="sign-up2">
+                  <div class="sign-up-sep"></div>
+                  <img src="./Images/Svg/go-back-signin.svg" alt="an arrow" class="sign-up-back">
+                  <div class="sign-up-text">
+                     <h1>Sign Up</h1>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, quibusdam!</p>
+                     <button type="button" class="sign-up-button">Log In</button>
+                  </div>
+                  <div class="sign-up-input">
+                     <div class="sign-up-input-2">
+                        <input type="text" name="name" id="sign-up-name" placeholder="Full Name" required>
+                        <input type="email" name="email" id="sign-up-email" placeholder="Email Address" required>
+                        <input type="password" name="password" id="sign-up-password" placeholder="Password" required>
+                        <button type="submit" class="sign-up-input-btn">Register</button>
+                        <h3><a href="#">Forgot Password?</a></h3>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="section-b1">
+               <div class="nav-b">
+                  <div class="nav-b1">
+                     <h1>Photogen</h1>
+                     <ul class="nav-b1-ul">
+                        <li class="nav-b1-li"><a href="#">Home</a></li>
+                        <li class="nav-b1-product">
+                           <a href="#">Products</a>
+                           <div class="dropdown">
+                              <ul>
+                                 <li><a href="#">Cameras</a></li>
+                                 <li><a href="#">Drones</a></li>
+                                 <li><a href="#">Recorders</a></li>
+                                 <li><a href="#">Lighting</a></li>
+                              </ul>
+                           </div>
+                           <div class="dropdown-arrow"></div>
+                        </li>
+                        <li class="nav-b1-li"><a href="#">Explore</a></li>
+                        <li class="nav-b1-li"><a href="#">Support</a></li>
+                     </ul>
+                  </div>
+                  <div class="nav-c1">
+                     <img src="./Images/Svg/user-regular.svg" alt="a user" class="account-img">
+                     <img src="./Images/Svg/cart.svg" alt="a shopping cart" class="nav-c1-cart">
+                  </div>
+               </div>
+            </div>
+         </nav>
+      </header>
+      <section>
+         <div class="section-2p">
+            <div class="lp-p">
+               <img src="./Images/Png/camera-product-min.png" alt="a camera" class="lp-p-img">
+               <div class="lp-p-info">
+                  <div class="lp-p-1">
+                     <h1>Product Name</h1>
+                     <h2>$69.99</h2>
+                     <button type="button">Add To Cart</button>
+                  </div>
+                  <div class="lp-p-sep"></div>
+                  <div class="lp-p-2">
+                     <div class="lp-p-first-link">
+                        <h3 class="lp-p-link1">Specifications</h3>
+                        <img src="./Images/Svg/product-goto.svg" alt="an arrow" class="lp-p-goto1">
+                     </div>
+                     <div class="lp-p-sec-link">
+                        <h3 class="lp-p-link2">Reviews</h3>
+                        <img src="./Images/Svg/product-goto.svg" alt="an arrow" class="lp-p-goto2">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="section-3p">
+            <div class="quality">
+               <h1>Excelent Quality & Price</h1>
+               <div class="quality-sep"></div>
+               <p>Erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices tincidunt arcu non sodales neque. d donec ultrices tincidunt arcu non sodales neque. tincidunt arcu non sodales neque.</p>
+               <button type="button" class="quality-button">Our Reviews</button>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="section-4p">
+            <div class="details">
+               <h1>The Best Quality Photos</h1>
+               <div class="details-sep"></div>
+               <p>Erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices tincidunt arcu non sodales.</p>
+               <img src="./Images/Png/camera-product-min.png" alt="a camera" class="details-img">
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="section-5p">
+            <div class="battery-p">
+               <div class="battery">
+                  <h1>Long Lasting Battery</h1>
+                  <div class="battery-sep"></div>
+                  <p>Erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices tincidunt arcu non sodales.</p>
+                  <img src="./Images/Png/camera-product-min.png" alt="a camera" class="battery-img">
+               </div>
+               <div class="battery-img-p">
+                  <img src="./Images/Png/camera-product-min.png" alt="a camera" class="battery-img-d">
+               </div>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="section-6p">
+            <div class="specs">
+               <div class="specs-title-p">
+                  <h1 class="specs-title">Specifications</h1>
+                  <div class="specs-sep"></div>
+               </div>
+               <div class="specs-1">
+                  <div class="specs-1-1line">
+                     <h1 class="specs-1a">750 Grams</h1>
+                     <h3 class="specs-1b">Weight</h3>
+                  </div>
+                  <div class="specs-1-sep1"></div>
+                  <div class="specs-1-2line">
+                     <h1 class="specs-1c">Compact</h1>
+                     <h3 class="specs-1d">Type</h3>
+                  </div>
+                  <div class="specs-1-sep2"></div>
+                  <div class="specs-1-2line">
+                     <h1 class="specs-1e">Super CCD</h1>
+                     <h3 class="specs-1f">Sensor</h3>
+                  </div>
+               </div>
+               <div class="specs-sep1-b"></div>
+               <div class="specifications-grid">
+                  <div class="specs-2">
+                     <h1 class="specs-title2">Physical Specifications</h1>
+                     <h2 class="specs-2a">Height: 100mm</h2>
+                     <div class="specs-2-sep1"></div>
+                     <h2 class="specs-2b">Width: 150mm</h2>
+                     <div class="specs-2-sep2"></div>
+                     <h2 class="specs-2c">Depth: 145mm</h2>
+                     <div class="specs-2-sep3"></div>
+                     <h2 class="specs-2d">Weight: 750g</h2>
+                     <div class="specs-2-sep4"></div>
+                  </div>
+                  <div class="specs-3">
+                     <h1 class="specs-title3">Technical Specifications</h1>
+                     <h2 class="specs-3a">Compact Camera</h2>
+                     <div class="specs-3-sep1"></div>
+                     <h2 class="specs-3b">Pixels: 26.5 Megapixels</h2>
+                     <div class="specs-3-sep2"></div>
+                     <h2 class="specs-3c">Aspect Ratio: 3:2 (Horizontal:Vertical)</h2>
+                     <div class="specs-3-sep3"></div>
+                     <h2 class="specs-3d">Color Filter System: RGB color filters</h2>
+                     <div class="specs-3-sep4"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="section-7p">
+            <div class="test">
+               <img src="./Images/Svg/quote-left.svg" alt="a quote" class="test-q-l">
+               <img src="./Images/Svg/quote-right.svg" alt="a quote" class="test-q-r">
+               <img src="./Images/Svg/image.svg" alt="an image" class="test-img">
+               <p>Erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices tincidunt arcu non sodales neque. Deneeb donec ultrices tellus id.</p>
+               <h3>- Liam Smith</h3>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="section-8p">
+            <div class="other">
+               <h1 class="other-title">Similar Products</h1>
+               <div class="other-sep"></div>
+               <div class="other-p">
+                  <div class="other-product1-p">
+                     <img src="./Images/Svg/Similar-img.svg" alt="a product" class="other-img1">
+                     <div class="other-product1">
+                        <h1>Name</h1>
+                        <p>SLIM FOLIO - iPad (7th and 8th gen) - Graphite - Suisse</p>
+                        <h2>$69.99</h2>
+                     </div>
+                  </div>
+                  <div class="other-product2-p">
+                     <img src="./Images/Svg/Similar-img.svg" alt="a product" class="other-img2">
+                     <div class="other-product2">
+                        <h1>Name</h1>
+                        <p>SLIM FOLIO - iPad (7th and 8th gen) - Graphite - Suisse</p>
+                        <h2>$69.99</h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <footer>
+         <div class="section-9p">
+            <div class="footer">
+               <div class="f-info">
+                  <h1 class="f-address">Address: 215, Rough st, ag21 h4g</h1>
+                  <h1 class="f-phone">0653 354 6568</h1>
+                  <h1 class="f-email">Photogen@gmail.com</h1>
+               </div>
+               <div class="f-other">
+                  <h1 class="f-imgs">Images from Pexel/Unsplashed</h1>
+                  <h1 class="f-fonts">Icons from Fontawsome</h1>
+                  <h1 class="f-copy">Copyright © 2020 Photogen</h1>
+               </div>
+               <div class="f-socials">
+                  <a href="#"><img src="./Images/Svg/facebook-brands (1).svg" alt="facebook icon" class="f-fb"></a>
+                  <a href="#"><img src="./Images/Svg/twitter-brands (1).svg" alt="twitter icon" class="f-twitter"></a>
+                  <a href="#"><img src="./Images/Svg/instagram-brands (1).svg" alt="instagram icon" class="f-ig"></a>
+               </div>
+            </div>
+         </div>
+      </footer>
+   </div>
+</body>
+</html>
