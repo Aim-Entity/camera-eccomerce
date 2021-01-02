@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,106 +11,13 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" defer></script>
    <script src="./Animations/list.js" defer></script>
    <link rel="stylesheet" href="./Styling/style.css">
+   {% block header %}
    <title>Photogen - Accessories</title>
+   {% endblock %}
 </head>
 <body>
+   {% block content %}
    <div class="cont-a">
-      <header>
-         <nav>
-            <div class="section-1">
-               <div class="nav">
-                  <div class="nav-links">
-                     <div class="burger-menu">
-                        <div class="burger"></div>
-                     </div>
-                  </div>
-                  <div class="nav-logo">
-                     <h1>Photogen</h1>
-                  </div>
-                  <div class="nav-cart-cont">
-                     <img src="./Images/Svg/cart.svg" alt="a cart icon" class="nav-cart">
-                  </div>
-               </div>
-               <div class="nav-menu">
-                  <li><a href="#">Home</a></li>
-                  <li class="link-products">Products</li>
-                  <li><a href="#">Explore</a></li>
-                  <li><a href="#">Support</a></li>
-                  <li><a href="#" id="sign-in-link">Sign In</a></li>
-               </div>
-               <div class="nav-products">
-                  <li><a href="#">Cameras</a></li>
-                  <li><a href="#">Drones</a></li>
-                  <li><a href="#">Recorders</a></li>
-                  <li><a href="#">Lighting</a></li>
-                  <img src="./Images/Svg/Back.svg" alt="an arrow icon" class="nav-back">
-               </div>
-               <div class="sign-in">
-                  <div class="sign-in-sep"></div>
-                  <img src="./Images/Svg/go-back-signin.svg" alt="an arrow" class="sign-in-back">
-                  <div class="sign-in-text">
-                     <h1>Sign In</h1>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, quibusdam!</p>
-                     <button type="button" class="sign-ing-button">Register</button>
-                  </div>
-                  <div class="sign-in-input">
-                     <div class="sign-in-input-2">
-                        <input type="email" name="email" id="sign-in-email" placeholder="Email Address" required>
-                        <input type="password" name="password" id="sign-in-password" placeholder="Password" required>
-                        <button type="submit" class="sign-in-input-btn">Log In</button>
-                        <h3><a href="#">Forgot Password?</a></h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="sign-up2">
-                  <div class="sign-up-sep"></div>
-                  <img src="./Images/Svg/go-back-signin.svg" alt="an arrow" class="sign-up-back">
-                  <div class="sign-up-text">
-                     <h1>Sign Up</h1>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, quibusdam!</p>
-                     <button type="button" class="sign-up-button">Log In</button>
-                  </div>
-                  <div class="sign-up-input">
-                     <div class="sign-up-input-2">
-                        <input type="text" name="name" id="sign-up-name" placeholder="Full Name" required>
-                        <input type="email" name="email" id="sign-up-email" placeholder="Email Address" required>
-                        <input type="password" name="password" id="sign-up-password" placeholder="Password" required>
-                        <button type="submit" class="sign-up-input-btn">Register</button>
-                        <h3><a href="#">Forgot Password?</a></h3>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="section-b1">
-               <div class="nav-b">
-                  <div class="nav-b1">
-                     <h1>Photogen</h1>
-                     <ul class="nav-b1-ul">
-                        <li class="nav-b1-li"><a href="#">Home</a></li>
-                        <li class="nav-b1-product">
-                           <a href="#">Products</a>
-                           <div class="dropdown">
-                              <ul>
-                                 <li><a href="#">Cameras</a></li>
-                                 <li><a href="#">Drones</a></li>
-                                 <li><a href="#">Recorders</a></li>
-                                 <li><a href="#">Lighting</a></li>
-                              </ul>
-                           </div>
-                           <div class="dropdown-arrow"></div>
-                        </li>
-                        <li class="nav-b1-li"><a href="#">Explore</a></li>
-                        <li class="nav-b1-li"><a href="#">Support</a></li>
-                     </ul>
-                  </div>
-                  <div class="nav-c1">
-                     <img src="./Images/Svg/user-regular.svg" alt="a user" class="account-img">
-                     <img src="./Images/Svg/cart.svg" alt="a shopping cart" class="nav-c1-cart">
-                  </div>
-               </div>
-            </div>
-         </nav>
-      </header>
       <section>
          <div class="section-2a">
             <div class="lp-a">
@@ -330,5 +239,6 @@
          </div>
       </footer>
    </div>
+   {% endblock %}
 </body>
 </html>
