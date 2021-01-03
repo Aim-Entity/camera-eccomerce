@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   {% block header %}
+   <title>Photogen - Shopping cart</title>
+   {% endblock %}
+</head>
+<body>
+   {% block content %}
+   <div class="cont-s">
+      <main>
+         <div class="section-2s">
+            <div class="cart">
+               <div class="cart-title">
+                  <h1>SHOPPING CART</h1>
+                  <h3 class="cart-title-id">ID: 258751689</h3>
+                  <div class="cart-sep1"></div>
+               </div>
+               <div class="cart-product">
+                  <div class="cart-product1">
+                     <img src="{% static 'imgs/Svg/cart-img.svg' %}" alt="a Product image" class="cart-img">
+                  </div>
+                  <div class="cart-product2">
+                     <p>SLIM FOLIO - iPad (7th and 8th gen) - Graphite - Suisse / Schweizer (Qwertz)</p>
+                     <h3>in stock</h3>
+                     <h2>$69.99</h2>
+                  </div>
+                  <div class="cart-product3">
+                     <div class="cart-product-container">
+                        <h4 id="cart-product-ammount">1</h4>
+                        <div class="cart-product-arrows">
+                           <img src="{% static 'imgs/Svg/arrow-up.png' %}" alt="an arrow" class="cart-arrow">
+                           <img src="{% static 'imgs/Svg/arrow-down.png' %}" alt="an arrow" class="cart-arrow">
+                        </div>
+                     </div>
+                     <img src="{% static 'imgs/Svg/trash.svg' %}" alt="a trash icon" class="cart-trash">
+                  </div>
+               </div>
+               <div class="cart-product-d">
+                  <div class="cart-product1-d">
+                     <img src="{% static 'imgs/Svg/cart-img.svg' %}" alt="a Product image" class="cart-img">
+                  </div>
+                  <div class="cart-product2-d">
+                     <p>SLIM FOLIO - iPad (7th and 8th gen) - Graphite - Suisse / Schweizer (Qwertz)</p>
+                  </div>
+                  <div class="cart-product3-d">
+                     <div class="cart-product-container">
+                        <h4 id="cart-product-ammount">1</h4>
+                        <div class="cart-product-arrows">
+                           <img src="{% static 'imgs/Svg/arrow-up.png' %}" alt="an arrow" class="cart-arrow">
+                           <img src="{% static 'imgs/Svg/arrow-down.png' %}" alt="an arrow" class="cart-arrow">
+                        </div>
+                     </div>
+                     <h3>in stock</h3>
+                  </div>
+                  <div class="cart-product4-d">
+                     <h2>$69.99</h2>
+                     <img src="{% static 'imgs/Svg/trash.svg' %}" alt="a trash icon" class="cart-trash">
+                  </div>
+               </div>
+               <div class="cart-sep2-p-d">
+                  <div class="cart-sep2-d"></div>
+               </div>
+               <p class="coupon-alert">Invalid coupon. Please try again.</p>
+               <div class="cart-coupon">
+                  <img src="{% static 'imgs/Svg/delete.svg' %}" alt="a cross" class="coupon-del">
+                  <input type="text" name="coupon" id="cart-coupon-input" placeholder="Coupon">
+                  <button type="submit">Apply</button>
+               </div>
+               <div class="cart-sep3-p">
+                  <div class="cart-sep3"></div>
+               </div>
+               <div class="cart-recap">
+                  <h1 class="c-recap-total">Total: <span class="c-recap-amm">$59.99</span></h1>
+                  <div class="cart-sep4"></div>
+                  <button type="button">Checkout</button>
+                  <div class="privacy-policy">
+                     <input type="checkbox" name="privacy" id="c-privacy" required>
+                     <p>By checking this box, I agree to the <span class="privacy-link1">Privacy Policy</span> and <span class="privacy-link2">Lorem ipsum</span>.</p>
+                  </div>
+               </div>
+               <div class="cart-finish-d">
+                  <div class="cart-coupon-d">
+                     <img src="{% static 'imgs/Svg/delete.svg' %}" alt="a cross" class="coupon-del">
+                     <input type="text" name="coupon" id="cart-coupon-input" placeholder="Coupon">
+                     <button type="submit">Apply</button>
+                  </div>
+                  <div class="cart-recap-d">
+                     <h1 class="c-recap-total">Total: <span class="c-recap-amm">$59.99</span></h1>
+                     <div class="cart-sep4"></div>
+                     <button type="button">Checkout</button>
+                     <div class="privacy-policy">
+                        <input type="checkbox" name="privacy" id="c-privacy" required>
+                        <p>By checking this box, I agree to the <span class="privacy-link1">Privacy Policy</span> and <span class="privacy-link2">Lorem ipsum</span>.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="c-continue">
+                  <img src="{% static 'imgs/Svg/c-shopping.svg' %}" alt="an arrow" class="c-continue-arrow">               
+                  <h2>Continue Shopping</h2>
+               </div>
+            </div>
+         </div>
+      </main>
+      <footer>
+         <div class="section-3s">
+            <div class="footer">
+               <div class="f-info">
+                  <h1 class="f-address">Address: 215, Rough st, ag21 h4g</h1>
+                  <h1 class="f-phone">0653 354 6568</h1>
+                  <h1 class="f-email">Photogen@gmail.com</h1>
+               </div>
+               <div class="f-other">
+                  <h1 class="f-imgs">Images from Pexel/Unsplashed</h1>
+                  <h1 class="f-fonts">Icons from Fontawsome</h1>
+                  <h1 class="f-copy">Copyright © 2020 Photogen</h1>
+               </div>
+               <div class="f-socials">
+                  <a href="#"><img src="{% static 'imgs/Svg/facebook-brands (1).svg' %}" alt="facebook icon" class="f-fb"></a>
+                  <a href="#"><img src="{% static 'imgs/Svg/twitter-brands (1).svg' %}" alt="twitter icon" class="f-twitter"></a>
+                  <a href="#"><img src="{% static 'imgs/Svg/instagram-brands (1).svg' %}" alt="instagram icon" class="f-ig"></a>
+               </div>
+            </div>
+         </div>
+      </footer>
+   </div>
+   {% endblock %}
+</body>
+</html>
