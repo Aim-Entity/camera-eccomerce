@@ -29,14 +29,14 @@
                 <h1>Photogen</h1>
             </div>
             <div class="nav-cart-cont">
-                <img src="{% static 'imgs/Svg/cart.svg' %}" alt="a cart icon" class="nav-cart">
+                <a href="{% url 'cart' %}"><img src="{% static 'imgs/Svg/cart.svg' %}" alt="a cart icon" class="nav-cart"></a>
             </div>
           </div>
           <div class="nav-menu">
-            <li><a href="#">Home</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
             <li class="link-products">Products</li>
             <li><a href="#">Explore</a></li>
-            <li><a href="#">Support</a></li>
+            <li><a href="{% url 'contact' %}">Support</a></li>
             <li><a href="#" id="sign-in-link">Sign In</a></li>
           </div>
           <div class="nav-products">
@@ -87,7 +87,7 @@
             <div class="nav-b1">
                 <h1>Photogen</h1>
                 <ul class="nav-b1-ul">
-                  <li class="nav-b1-li"><a href="#">Home</a></li>
+                  <li class="nav-b1-li"><a href="{% url 'home' %}">Home</a></li>
                   <li class="nav-b1-product">
                       <a href="#">Products</a>
                       <div class="dropdown">
@@ -101,12 +101,12 @@
                       <div class="dropdown-arrow"></div>
                   </li>
                   <li class="nav-b1-li"><a href="#">Explore</a></li>
-                  <li class="nav-b1-li"><a href="#">Support</a></li>
+                  <li class="nav-b1-li"><a href="{% url 'contact' %}">Support</a></li>
                 </ul>
             </div>
             <div class="nav-c1">
                 <img src="{% static 'imgs/Svg/user-regular.svg' %}" alt="a user" class="account-img">
-                <img src="{% static 'imgs/Svg/cart.svg' %}" alt="a shopping cart" class="nav-c1-cart">
+                <img href="{% url 'cart' %}" src="{% static 'imgs/Svg/cart.svg' %}" alt="a shopping cart" class="nav-c1-cart">
             </div>
           </div>
       </div>
