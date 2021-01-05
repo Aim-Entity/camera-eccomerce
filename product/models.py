@@ -3,6 +3,14 @@ from django.db import models
 from django.db import models
 from django.contrib.auth.models import User
 
+PRODUCT_TYPE = (
+    ('cameras', 'cameras'),
+    ('drones', 'drones'),
+    ('recorders', 'recorders'),
+    ('lighting', 'lighting'),
+    ('other', 'other'),
+)
+
 
 class Customer(models.Model):
     user = models.OneToOneField(
@@ -20,6 +28,8 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
     digital = models.BooleanField(default=False, null=True, blank=False)
     offer = models.BooleanField(default=False, null=True, blank=False)
+    product_type = models.CharField(choices=PRODUCT_TYPE,
+                                    null=True, blank=True, default=PRODUCT_TYPE[-1], max_length=100)
 
     def __str__(self):
         return self.name

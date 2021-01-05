@@ -923,7 +923,7 @@ input {
 .product-img {
   width: 13rem;
   height: 8rem;
-  transform: rotate(-18deg);
+  object-fit: cover;
 }
 
 .product-img-p {
@@ -2279,6 +2279,10 @@ input {
     margin-bottom: 50px;
   }
 
+  .product-list-btn {
+    margin-top: 20px;
+  }
+
   input {
     outline: none;
   }
@@ -3507,7 +3511,6 @@ input {
   .product-img {
     width: 13rem;
     height: 8rem;
-    transform: rotate(-18deg);
     object-fit: cover;
   }
 
