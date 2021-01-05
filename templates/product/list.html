@@ -31,175 +31,30 @@
                   <img src="{% static 'imgs/Svg/delete.svg' %}" alt="delete icon" class="delete">
                   <button type="submit" class="search-button">Search</button>
                </div>
+               {% for product in products %}
                <div class="product-card">
                   <div class="product-img-p">
-                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="product-img">
+                     <img src="{{ product.image.url }}" alt="a camera" class="product-img">
                   </div>
                   <div class="product-info">
-                     <h1>Product Name</h1>
-                     <h3>$299</h3>
+                     <h1>{{ product.name }}</h1>
+                     <h3>${{ product.price|floatformat:2 }}</h3>
                   </div>
                </div>
-               <div class="product-card">
-                  <div class="product-img-p">
-                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="product-img">
-                  </div>
-                  <div class="product-info">
-                     <h1>Product Name</h1>
-                     <h3>$299</h3>
-                  </div>
-               </div>
-               <div class="product-card">
-                  <div class="product-img-p">
-                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="product-img">
-                  </div>
-                  <div class="product-info">
-                     <h1>Product Name</h1>
-                     <h3>$299</h3>
-                  </div>
-               </div>
-               <div class="product-card">
-                  <div class="product-img-p">
-                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="product-img">
-                  </div>
-                  <div class="product-info">
-                     <h1>Product Name</h1>
-                     <h3>$299</h3>
-                  </div>
-               </div>
-               <div class="product-card">
-                  <div class="product-img-p">
-                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="product-img">
-                  </div>
-                  <div class="product-info">
-                     <h1>Product Name</h1>
-                     <h3>$299</h3>
-                  </div>
-               </div>
-               <div class="product-card">
-                  <div class="product-img-p">
-                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="product-img">
-                  </div>
-                  <div class="product-info">
-                     <h1>Product Name</h1>
-                     <h3>$299</h3>
-                  </div>
-               </div>
-               <div class="product-card">
-                  <div class="product-img-p">
-                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="product-img">
-                  </div>
-                  <div class="product-info">
-                     <h1>Product Name</h1>
-                     <h3>$299</h3>
-                  </div>
-               </div>
-               <div class="product-card">
-                  <div class="product-img-p">
-                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="product-img">
-                  </div>
-                  <div class="product-info">
-                     <h1>Product Name</h1>
-                     <h3>$299</h3>
-                  </div>
-               </div>
-               <div class="product-card">
-                  <div class="product-img-p">
-                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="product-img">
-                  </div>
-                  <div class="product-info">
-                     <h1>Product Name</h1>
-                     <h3>$299</h3>
-                  </div>
-               </div>
+               {% endfor %}
                <div class="product-card-d-p">
-                  <div class="products-card-d-column">
-                     <div class="product-card-d">
-                        <div class="product-img-p">
-                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="product-img">
-                        </div>
-                        <div class="product-info">
-                           <h1>Product Name</h1>
-                           <h3>$299</h3>
-                        </div>
+                  {% for product in products %}
+                  <div class="product-card-d">
+                     <div class="product-img-p">
+                        <img src="{{ product.image.url }}" alt="a camera" class="product-img">
                      </div>
-                     <div class="product-card-d">
-                        <div class="product-img-p">
-                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="product-img">
-                        </div>
-                        <div class="product-info">
-                           <h1>Product Name</h1>
-                           <h3>$299</h3>
-                        </div>
-                     </div>
-                     <div class="product-card-d">
-                        <div class="product-img-p">
-                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="product-img">
-                        </div>
-                        <div class="product-info">
-                           <h1>Product Name</h1>
-                           <h3>$299</h3>
-                        </div>
+                     <div class="product-info">
+                        <h1>{{ product.name }}</h1>
+                        <h3>${{ product.price }}</h3>
                      </div>
                   </div>
-                  <div class="products-card-d-column">
-                     <div class="product-card-d">
-                        <div class="product-img-p">
-                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="product-img">
-                        </div>
-                        <div class="product-info">
-                           <h1>Product Name</h1>
-                           <h3>$299</h3>
-                        </div>
-                     </div>
-                     <div class="product-card-d">
-                        <div class="product-img-p">
-                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="product-img">
-                        </div>
-                        <div class="product-info">
-                           <h1>Product Name</h1>
-                           <h3>$299</h3>
-                        </div>
-                     </div>
-                     <div class="product-card-d">
-                        <div class="product-img-p">
-                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="product-img">
-                        </div>
-                        <div class="product-info">
-                           <h1>Product Name</h1>
-                           <h3>$299</h3>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="products-card-d-column">
-                     <div class="product-card-d">
-                        <div class="product-img-p">
-                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="product-img">
-                        </div>
-                        <div class="product-info">
-                           <h1>Product Name</h1>
-                           <h3>$299</h3>
-                        </div>
-                     </div>
-                     <div class="product-card-d">
-                        <div class="product-img-p">
-                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="product-img">
-                        </div>
-                        <div class="product-info">
-                           <h1>Product Name</h1>
-                           <h3>$299</h3>
-                        </div>
-                     </div>
-                     <div class="product-card-d">
-                        <div class="product-img-p">
-                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="product-img">
-                        </div>
-                        <div class="product-info">
-                           <h1>Product Name</h1>
-                           <h3>$299</h3>
-                        </div>
-                     </div>
-                  </div>
+                  {% endfor %}
+
                </div>
                <div class="pagination">
                   <img src="{% static 'imgs/Svg/caret-left-solid.svg' %}" alt="an arrow" class="pag-left">

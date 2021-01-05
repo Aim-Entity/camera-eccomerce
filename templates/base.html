@@ -35,7 +35,7 @@
           <div class="nav-menu">
             <li><a href="{% url 'home' %}">Home</a></li>
             <li class="link-products">Products</li>
-            <li><a href="#">Explore</a></li>
+            <li><a href="{% url 'product-list' %}">Explore</a></li>
             <li><a href="{% url 'contact' %}">Support</a></li>
             <li><a href="#" id="sign-in-link">Sign In</a></li>
           </div>
@@ -100,7 +100,7 @@
                       </div>
                       <div class="dropdown-arrow"></div>
                   </li>
-                  <li class="nav-b1-li"><a href="#">Explore</a></li>
+                  <li class="nav-b1-li"><a href="{% url 'product-list' %}">Explore</a></li>
                   <li class="nav-b1-li"><a href="{% url 'contact' %}">Support</a></li>
                 </ul>
             </div>

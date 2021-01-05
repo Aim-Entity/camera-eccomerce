@@ -728,6 +728,7 @@ input {
   width: 13rem;
   height: 8rem;
   transform: rotate(-18deg);
+  object-fit: cover;
 }
 
 .offers-img-p {

@@ -62,56 +62,62 @@
                <h1 class="offers-name">Our Best Offers</h1>
                <div class="offer-card">
                   <div class="offers-img-p">
-                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img">
+                     <img src="{{ p1.image.url }}" alt="a camera" class="offers-img">
                   </div>
                   <div class="offers-info">
-                     <h1>Product Name</h1>
-                     <h3>$299</h3>
+                     <h1>{{ p1.name }}</h1>
+                     <h3>${{ p1.price|floatformat:2 }}</h3>
+                     <a href=""><button class="product-btn">Visit</button></a>
                   </div>
                </div>
                <div class="offer-card">
                   <div class="offers-img-p">
-                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img">
+                     <img src="{{ p2.image.url }}" alt="a camera" class="offers-img">
                   </div>
                   <div class="offers-info">
-                     <h1>Product Name</h1>
-                     <h3>$299</h3>
+                     <h1>{{ p2.name }}</h1>
+                     <h3>${{ p2.price|floatformat:2 }}</h3>
+                     <a href=""><button class="product-btn">Visit</button></a>
                   </div>
                </div>
                <div class="offer-card">
                   <div class="offers-img-p">
-                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img">
+                     <img src="{{ p3.image.url }}" alt="a camera" class="offers-img">
                   </div>
                   <div class="offers-info">
-                     <h1>Product Name</h1>
-                     <h3>$299</h3>
+                     <h1>{{ p3.name }}</h1>
+                     <h3>${{ p3.price|floatformat:2 }}</h3>
+                     <a href=""><button class="product-btn">Visit</button></a>
                   </div>
                </div>
                <div class="offer-card">
                   <div class="offers-img-p">
-                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img">
+                     <img src="{{ p4.image.url }}" alt="a camera" class="offers-img">
                   </div>
                   <div class="offers-info">
-                     <h1>Product Name</h1>
-                     <h3>$299</h3>
+                     <h1>{{ p4.name }}</h1>
+                     <h3>${{ p4.price|floatformat:2 }}</h3>
+                     <a href=""><button class="product-btn">Visit</button></a>
                   </div>
                </div>
                <div class="offer-card">
                   <div class="offers-img-p">
-                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img">
+                     <img src="{{ p5.image.url }}" alt="a camera" class="offers-img">
                   </div>
                   <div class="offers-info">
-                     <h1>Product Name</h1>
-                     <h3>$299</h3>
+                     <h1>{{ p5.name }}</h1>
+                     <h3>${{ p5.price|floatformat:2 }}</h3>
+                     <a href=""><button class="product-btn">Visit</button></a>
                   </div>
                </div>
                <div class="offer-card">
                   <div class="offers-img-p">
-                     <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img">
+                     <img src="{{ p6.image.url }}" alt="a camera" class="offers-img">
                   </div>
                   <div class="offers-info">
-                     <h1>Product Name</h1>
-                     <h3>$299</h3>
+                     <h1>{{ p6.name }}</h1>
+                     <h3>${{ p6.price|floatformat:2 }}</h3>
+                     <a href=""><button class="product-btn">Visit</button></a>
                   </div>
                </div>
                <h2 class="view-more-offers"><a href="#" class="view-more-link">View More</a></h2>
@@ -126,58 +132,64 @@
                   <div class="offers-cards-p1">
                      <div class="offer-card-d">
                         <div class="offers-img-p-d">
-                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img-d">
+                           <img src="{{ p1.image.url }}" alt="a camera" class="offers-img-d">
                         </div>
                         <div class="offers-info-d">
-                           <h1>Product Name</h1>
-                           <h3>$299</h3>
+                           <h1>{{ p1.name }}</h1>
+                           <h3>${{ p1.price|floatformat:2 }}</h3>
+                           <a href=""><button class="product-btn">Visit</button></a>
                         </div>
                      </div>
                      <div class="offer-card-d">
                         <div class="offers-img-p-d">
-                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img-d">
+                           <img src="{{ p2.image.url }}" alt="a camera" class="offers-img-d">
                         </div>
                         <div class="offers-info-d">
-                           <h1>Product Name</h1>
-                           <h3>$299</h3>
+                           <h1>{{ p2.name }}</h1>
+                           <h3>${{ p2.price|floatformat:2 }}</h3>
+                           <a href=""><button class="product-btn">Visit</button></a>
                         </div>
                      </div>
                      <div class="offer-card-d">
                         <div class="offers-img-p-d">
-                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img-d">
+                           <img src="{{ p3.image.url }}" alt="a camera" class="offers-img-d">
                         </div>
                         <div class="offers-info-d">
-                           <h1>Product Name</h1>
-                           <h3>$299</h3>
+                           <h1>{{ p3.name }}</h1>
+                           <h3>${{ p3.price|floatformat:2 }}</h3>
+                           <a href=""><button class="product-btn">Visit</button></a>
                         </div>
                      </div>
                   </div>
                   <div class="offers-cards-p2">
                      <div class="offer-card-d">
                         <div class="offers-img-p-d">
-                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img-d">
+                           <img src="{{ p4.image.url }}" alt="a camera" class="offers-img-d">
                         </div>
                         <div class="offers-info-d">
-                           <h1>Product Name</h1>
-                           <h3>$299</h3>
+                           <h1>{{ p4.name }}</h1>
+                           <h3>${{ p4.price|floatformat:2 }}</h3>
+                           <a href=""><button class="product-btn">Visit</button></a>
                         </div>
                      </div>
                      <div class="offer-card-d">
                         <div class="offers-img-p-d">
-                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img-d">
+                           <img src="{{ p5.image.url }}" alt="a camera" class="offers-img-d">
                         </div>
                         <div class="offers-info-d">
-                           <h1>Product Name</h1>
-                           <h3>$299</h3>
+                           <h1>{{ p5.name }}</h1>
+                           <h3>${{ p5.price|floatformat:2 }}</h3>
+                           <a href="" ><button class="product-btn">Visit</button></a>
                         </div>
                      </div>
                      <div class="offer-card-d">
                         <div class="offers-img-p-d">
-                           <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="offers-img-d">
+                           <img src="{{ p6.image.url }}" alt="a camera" class="offers-img-d">
                         </div>
                         <div class="offers-info-d">
-                           <h1>Product Name</h1>
-                           <h3>$299</h3>
+                           <h1>{{ p6.name }}</h1>
+                           <h3>${{ p6.price|floatformat:2 }}</h3>
+                           <a href="" ><button class="product-btn">Visit</button></a>
                         </div>
                      </div>
                   </div>
