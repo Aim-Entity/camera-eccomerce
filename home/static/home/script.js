@@ -145,6 +145,7 @@ function updating_cart() {
 
    for(let i = 0; i < updateBtns.length; i++){
     updateBtns[i].addEventListener("click", function() {
+       print("Test")
       let productId = this.dataset.product
       let action = this.dataset.action
       console.log("ProductId", productId, "Action", action)

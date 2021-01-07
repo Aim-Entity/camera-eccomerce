@@ -145,7 +145,7 @@
                         <div class="offers-info-d">
                            <h1>{{ p2.name }}</h1>
                            <h3>${{ p2.price|floatformat:2 }}</h3>
-                           <a href=""><button data-product="{{ product.id }}" data-action="add" class="product-btn update-cart">Visit</button></a>
+                           <a href=""><button data-product="{{ p2.id }}" data-action="add" class="product-btn update-cart">Visit</button></a>
                         </div>
                      </div>
                      <div class="offer-card-d">
@@ -155,7 +155,7 @@
                         <div class="offers-info-d">
                            <h1>{{ p3.name }}</h1>
                            <h3>${{ p3.price|floatformat:2 }}</h3>
-                           <a href="#"><button data-product="{{ product.id }}" data-action="add" class="product-btn update-cart">Visit</button></a>
+                           <a href="#"><button data-product="{{ p3.id }}" data-action="add" class="product-btn update-cart">Visit</button></a>
                         </div>
                      </div>
                   </div>
@@ -283,6 +283,49 @@
             signIn.classList.add("sign-in-active");
             signUp.classList.remove("sign-up-active");
          });
+
+         function updating_cart() {
+            let updateBtns = document.querySelectorAll(".update-cart")
+         
+            for(let i = 0; i < updateBtns.length; i++){
+             updateBtns[i].addEventListener("click", function() {
+               let productId = this.dataset.product
+               let action = this.dataset.action
+               console.log("ProductId", productId, "Action", action)
+         
+               if(user === "AnonymousUser"){
+                  console.log("Not logged in")
+               }
+               else{
+                  updateUserOrder(productId, action)
+                 }
+             })
+             }
+         
+             function updateUserOrder(productId, action){
+               console.log("User is logged in, sending data...")
+         
+               let url = "/update_item/"
+         
+               fetch(url, {
+                  method: "POST",
+                  headers: {
+                     "Content-Type": "application/json",
+                     "X-CSRFToken": csrftoken
+                  },
+                  body: JSON.stringify({"productId": productId, "action": action})
+               })
+               .then((response) => {
+                  return response.json()
+               })
+               .then((data) => {
+                  console.log("Data", data)
+                  location.reload()
+               })
+            }
+         }
+   
+         updating_cart()
    </script>
    {% endblock %}
 </body>

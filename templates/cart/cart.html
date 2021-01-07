@@ -22,19 +22,19 @@
                {% for item in items %}
                <div class="cart-product">
                   <div class="cart-product1">
-                     <img src="{% static 'imgs/Svg/cart-img.svg' %}" alt="a Product image" class="cart-img">
+                     <img src="{{ item.product.imageURL }}" alt="a Product image" class="cart-img">
                   </div>
                   <div class="cart-product2">
-                     <p>SLIM FOLIO - iPad (7th and 8th gen) - Graphite - Suisse / Schweizer (Qwertz)</p>
+                     <p>{{ item.product.name }}</p>
                      <h3>in stock</h3>
-                     <h2>$69.99</h2>
+                     <h2>${{ item.product.price|floatformat:2 }}</h2>
                   </div>
                   <div class="cart-product3">
                      <div class="cart-product-container">
-                        <h4 id="cart-product-ammount">1</h4>
+                        <h4 id="cart-product-ammount">{{ item.quantity }}</h4>
                         <div class="cart-product-arrows">
-                           <img src="{% static 'imgs/Svg/arrow-up.png' %}" alt="an arrow" class="cart-arrow">
-                           <img src="{% static 'imgs/Svg/arrow-down.png' %}" alt="an arrow" class="cart-arrow">
+                           <img data-product="{{ item.product.id }}" data-action="add" src="{% static 'imgs/Svg/arrow-up.png' %}" alt="an arrow" class="cart-arrow update-cart">
+                           <img data-product="{{ item.product.id }}" data-action="remove" src="{% static 'imgs/Svg/arrow-down.png' %}" alt="an arrow" class="cart-arrow update-cart">
                         </div>
                      </div>
                   </div>
@@ -129,6 +129,51 @@
          </div>
       </footer>
    </div>
+
+   <script>
+      function updating_cart() {
+         let updateBtns = document.querySelectorAll(".update-cart")
+      
+         for(let i = 0; i < updateBtns.length; i++){
+          updateBtns[i].addEventListener("click", function() {
+            let productId = this.dataset.product
+            let action = this.dataset.action
+            console.log("ProductId", productId, "Action", action)
+      
+            if(user === "AnonymousUser"){
+               console.log("Not logged in")
+            }
+            else{
+               updateUserOrder(productId, action)
+              }
+          })
+          }
+      
+          function updateUserOrder(productId, action){
+            console.log("User is logged in, sending data...")
+      
+            let url = "/update_item/"
+      
+            fetch(url, {
+               method: "POST",
+               headers: {
+                  "Content-Type": "application/json",
+                  "X-CSRFToken": csrftoken
+               },
+               body: JSON.stringify({"productId": productId, "action": action})
+            })
+            .then((response) => {
+               return response.json()
+            })
+            .then((data) => {
+               console.log("Data", data)
+               location.reload()
+            })
+         }
+      }
+
+      updating_cart()
+   </script>
    {% endblock %}
 </body>
 </html>

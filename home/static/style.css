@@ -41,6 +41,11 @@ button:hover {
   transition: ease 300ms;
 }
 
+.cart-img {
+  width: 7.15rem;
+  height: 7.15rem;
+}
+
 input {
   outline: none;
 }
@@ -1624,6 +1629,7 @@ input {
 .cart-product2 p {
   font-size: 0.85rem;
   font-weight: 100;
+  margin-left: 20px;
 }
 
 .cart-product2 h3 {
@@ -1631,12 +1637,14 @@ input {
   font-weight: 100;
   color: #e63946;
   margin-top: 10.5%;
+  margin-left: 20px;
 }
 
 .cart-product2 h2 {
   font-size: 1.2rem;
   margin-top: 1.2px;
   font-weight: 500;
+  margin-left: 20px;
 }
 
 #cart-product-ammount {
@@ -2507,7 +2515,7 @@ input {
 
   .nav-b1-li {
     display: inline-block;
-    font-size: 0.75rem;
+    font-size: 0.95rem;
     font-weight: 100;
     color: #fff;
     margin-left: 2.75rem;
@@ -4388,7 +4396,7 @@ input {
     width: 96.8%;
     height: 1.5px;
     background: #c5c5c5;
-    margin-top: 0.62rem;
+    display: none;
   }
 
   /* Coupon */
@@ -4398,7 +4406,7 @@ input {
     height: 20rem;
     grid-template-columns: 70% 30%;
     grid-template-rows: 1fr;
-    margin-top: 3%;
+    margin-top: 20%;
   }
 
   .cart-recap {
