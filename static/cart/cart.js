@@ -5,12 +5,7 @@ function cont() {
       if (mediaMobile.matches) {
 
          // Nav => solid background
-         const nav = document.querySelector(".nav");
-   
-         window.addEventListener("scroll", () => {
-            let windowPosition = window.scrollY > 0;
-            nav.classList.toggle("scroll-nav", windowPosition);
-         });
+         const nav = document.querySelector(".nav").style.background = "#131313";
    
          // Nav - burger
          const burger = document.querySelector(".burger-menu");
@@ -88,12 +83,7 @@ function cont() {
       if (mediaDesktop.matches && mediaDesktop2.matches) {
 
          // Nav - background
-         const navD = document.querySelector(".nav-b");
-   
-         window.addEventListener("scroll", () => {
-            let windowPositionD = window.scrollY > 0;
-            navD.classList.toggle("nav-b-active", windowPositionD);
-         });
+         const navD = document.querySelector(".nav-b").style.background = "#131313";
 
          // Sign in
          const signIn = document.querySelector(".sign-in");
@@ -137,5 +127,7 @@ function cont() {
    }
 
    qDesktop();
+
 };
-cont()
+
+cont();

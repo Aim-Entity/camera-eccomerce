@@ -131,6 +131,32 @@ function cont() {
             signUp.classList.remove("sign-up-active");
          });
 
+         // Lp - link
+         const productLink1 = document.querySelector(".lp-p-link1");
+         const productArrow1 = document.querySelector(".lp-p-goto1");
+         const productLink2 = document.querySelector(".lp-p-link2");
+         const productArrow2 = document.querySelector(".lp-p-goto2");
+
+         productLink1.addEventListener("mouseover", () => {
+            productArrow1.style.transform = "translateX(0.5rem)";
+            productArrow1.style.transition = "ease 400ms";
+         });
+         
+         productLink1.addEventListener("mouseout", () => {
+            productArrow1.style.transform = "translateX(0rem)";
+            productArrow1.style.transition = "ease 400ms";
+         });
+
+         productLink2.addEventListener("mouseover", () => {
+            productArrow2.style.transform = "translateX(0.5rem)";
+            productArrow2.style.transition = "ease 400ms";
+         });
+         
+         productLink2.addEventListener("mouseout", () => {
+            productArrow2.style.transform = "translateX(0rem)";
+            productArrow2.style.transition = "ease 400ms";
+         });
+
       } else {
          console.log("Width > 1280px");
       }
@@ -138,4 +164,5 @@ function cont() {
 
    qDesktop();
 };
+
 cont()

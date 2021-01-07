@@ -3,9 +3,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
    {% block header %}
    <script src="{% static 'cart/cart.js' %}" defer></script>
    <title>Photogen - Shopping cart</title>
@@ -22,6 +19,7 @@
                   <h3 class="cart-title-id">ID: 258751689</h3>
                   <div class="cart-sep1"></div>
                </div>
+               {% for item in items %}
                <div class="cart-product">
                   <div class="cart-product1">
                      <img src="{% static 'imgs/Svg/cart-img.svg' %}" alt="a Product image" class="cart-img">
@@ -39,30 +37,31 @@
                            <img src="{% static 'imgs/Svg/arrow-down.png' %}" alt="an arrow" class="cart-arrow">
                         </div>
                      </div>
-                     <img src="{% static 'imgs/Svg/trash.svg' %}" alt="a trash icon" class="cart-trash">
                   </div>
                </div>
+               {% endfor %}
                <div class="cart-product-d">
+                  {% for item in items %}
                   <div class="cart-product1-d">
-                     <img src="{% static 'imgs/Svg/cart-img.svg' %}" alt="a Product image" class="cart-img">
+                     <img src="{{ item.product.imageURL }}" alt="a Product image" class="cart-img">
                   </div>
                   <div class="cart-product2-d">
-                     <p>SLIM FOLIO - iPad (7th and 8th gen) - Graphite - Suisse / Schweizer (Qwertz)</p>
+                     <p>{{ item.product.name }}</p>
                   </div>
                   <div class="cart-product3-d">
                      <div class="cart-product-container">
-                        <h4 id="cart-product-ammount">1</h4>
+                        <h4 id="cart-product-ammount">{{ item.quantity }}</h4>
                         <div class="cart-product-arrows">
-                           <img src="{% static 'imgs/Svg/arrow-up.png' %}" alt="an arrow" class="cart-arrow">
-                           <img src="{% static 'imgs/Svg/arrow-down.png' %}" alt="an arrow" class="cart-arrow">
+                           <img data-product="{{ item.product.id }}" data-action="add" class="cart-arrow update-cart" src="{% static 'imgs/Svg/arrow-up.png' %}" alt="an arrow" class="cart-arrow">
+                           <img data-product="{{ item.product.id }}" data-action="remove" class="cart-arrow update-cart" src="{% static 'imgs/Svg/arrow-down.png' %}" alt="an arrow">
                         </div>
                      </div>
                      <h3>in stock</h3>
                   </div>
                   <div class="cart-product4-d">
-                     <h2>$69.99</h2>
-                     <img src="{% static 'imgs/Svg/trash.svg' %}" alt="a trash icon" class="cart-trash">
+                     <h2>${{ item.product.price|floatformat:2 }}</h2>
                   </div>
+                  {% endfor %}
                </div>
                <div class="cart-sep2-p-d">
                   <div class="cart-sep2-d"></div>

@@ -14,6 +14,17 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.product-btn {
+  width: 120px;
+  height: 33px;
+  color: white;
+  border: none;
+
+  background: #e63946;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
 textarea {
   resize: none;
 }
@@ -715,7 +726,7 @@ input {
 .offer-card {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 70% 30%;
+  grid-template-rows: 50% 50%;
   width: 84%;
   height: 26.25rem;
   background: #fff;
@@ -728,6 +739,7 @@ input {
   width: 13rem;
   height: 8rem;
   transform: rotate(-18deg);
+
   object-fit: cover;
 }
 
@@ -757,7 +769,7 @@ input {
 .offers-info h3 {
   font-size: 1.15rem;
   font-weight: 200;
-  margin-top: 0.35rem;
+  margin-top: 13px;
 }
 
 .offers-name {
@@ -911,7 +923,7 @@ input {
 .product-img {
   width: 13rem;
   height: 8rem;
-  transform: rotate(-18deg);
+  object-fit: cover;
 }
 
 .product-img-p {
@@ -2256,6 +2268,21 @@ input {
     outline: none;
   }
 
+  .product-btn {
+    width: 160px;
+    height: 46px;
+    color: white;
+    border: none;
+
+    background: #e63946;
+    border-radius: 3px;
+    margin-bottom: 50px;
+  }
+
+  .product-list-btn {
+    margin-top: 20px;
+  }
+
   input {
     outline: none;
   }
@@ -3121,7 +3148,7 @@ input {
   .offer-card {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 70% 30%;
+    grid-template-rows: 50% 50%;
     width: 84%;
     height: 26.25rem;
     background: #fff;
@@ -3131,8 +3158,7 @@ input {
   }
 
   .offers-img {
-    width: 13rem;
-    height: 8rem;
+    width: 70%;
     transform: rotate(-18deg);
   }
 
@@ -3252,9 +3278,7 @@ input {
   }
 
   .offers-img-d {
-    width: 7.75rem;
-    height: 5rem;
-    transform: rotate(-18deg);
+    height: 7rem;
   }
 
   .offers-img-p-d {
@@ -3277,6 +3301,7 @@ input {
   .offers-info-d h1 {
     font-size: 1.65rem;
     font-weight: 600;
+    margin-top: 25px;
   }
 
   .offers-info-d h3 {
@@ -3458,7 +3483,7 @@ input {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 70% 30%;
-    width: 28%;
+    width: 75%;
     height: 26.25rem;
     background: #fff;
     border-radius: 20px;
@@ -3469,8 +3494,10 @@ input {
 
   .product-card-d-p {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 33.3% 33.3% 33.3%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
     width: 100%;
   }
 
@@ -3484,7 +3511,7 @@ input {
   .product-img {
     width: 13rem;
     height: 8rem;
-    transform: rotate(-18deg);
+    object-fit: cover;
   }
 
   .product-img-p {

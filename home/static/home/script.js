@@ -14,6 +14,7 @@ function cont() {
    
          // Nav - burger
          const burger = document.querySelector(".burger-menu");
+         cosnole.log(burger)
          const burgerMenu = document.querySelector(".nav-menu");
    
          burger.addEventListener("click", () => {
@@ -138,5 +139,67 @@ function cont() {
 
    qDesktop();
 };
+
+function updating_cart() {
+   let updateBtns = document.querySelectorAll(".update-cart")
+
+   for(let i = 0; i < updateBtns.length; i++){
+    updateBtns[i].addEventListener("click", function() {
+      let productId = this.dataset.product
+      let action = this.dataset.action
+      console.log("ProductId", productId, "Action", action)
+
+      if(user === "AnonymousUser"){
+         console.log("Not logged in")
+      }
+      else{
+         updateUserOrder(productId, action)
+        }
+    })
+    }
+
+    function updateUserOrder(productId, action){
+      console.log("User is logged in, sending data...")
+
+      let url = "/update_item/"
+
+      fetch(url, {
+         method: "POST",
+         headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": csrftoken
+         },
+         body: JSON.stringify({"productId": productId, "action": action})
+      })
+      .then((response) => {
+         return response.json()
+      })
+      .then((data) => {
+         console.log("Data", data)
+         location.reload()
+      })
+   }
+}
+
+function search() {
+   // Search bar
+   const search = document.querySelector(".search-bar");
+   const cross = document.querySelector(".delete");
+
+   search.addEventListener("click", () => {
+      search.classList.toggle("search-hover");
+      cross.classList.toggle("cross-hover");
+   });
+
+   cross.addEventListener("click", () => {
+      search.value = "";
+      search.classList.remove("search-hover");
+      cross.classList.remove("cross-hover");
+   });
+}
+
+search()
+
+updating_cart()
 
 cont()

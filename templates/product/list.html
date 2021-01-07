@@ -3,10 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    {% block header %}
-   <script src="{% static 'product/list.js' %}" defer></script>
    <title>Photogen - Accessories</title>
    {% endblock %}
 </head>
@@ -90,6 +87,72 @@
          </div>
       </footer>
    </div>
+
+   <script>
+      const burger = document.querySelector(".burger-menu");
+      const burgerMenu = document.querySelector(".nav-menu");
+
+      burger.addEventListener("click", () => {
+         burger.classList.toggle("burger-open");
+         burgerMenu.classList.toggle("openM");
+
+         if (burger.classList !== "burger-open") {
+            productsMenu.classList.remove("products-open");
+         }
+
+         if (window.scrollY < 1) {
+            nav.classList.toggle("scroll-nav");
+         }
+      });
+
+      const products = document.querySelector(".link-products");
+         const productsMenu = document.querySelector(".nav-products")
+
+         products.addEventListener("click", () => {
+            productsMenu.classList.toggle("products-open");
+         });
+
+         const goBack = document.querySelector(".nav-back");
+
+         goBack.addEventListener("click", () => {
+            productsMenu.classList.remove("products-open");
+         });
+
+         const signIn = document.querySelector(".sign-in");
+         const signInLink = document.getElementById("sign-in-link");
+         const signInImg = document.querySelector(".account-img");
+         const signInBack = document.querySelector(".sign-in-back");
+         const signUpBtn = document.querySelector(".sign-ing-button");
+         const signUp = document.querySelector(".sign-up2");
+         const signUpBack = document.querySelector(".sign-up-back");
+         const signInButton = document.querySelector(".sign-up-button");
+
+         signInLink.addEventListener("click", () => {
+            signIn.classList.toggle("sign-in-active");
+         });
+
+         signInImg.addEventListener("click", () => {
+            signIn.classList.toggle("sign-in-active");
+         });
+
+         signInBack.addEventListener("click", () => {
+            signIn.classList.remove("sign-in-active");
+         });
+
+         signUpBtn.addEventListener("click", () => {
+            signUp.classList.add("sign-up-active");
+            signIn.classList.remove("sign-in-active");
+         });
+
+         signUpBack.addEventListener("click", () => {
+            signUp.classList.remove("sign-up-active");
+         });
+
+         signInButton.addEventListener("click", () => {
+            signIn.classList.add("sign-in-active");
+            signUp.classList.remove("sign-up-active");
+         });
+   </script>
    {% endblock %}
 </body>
 </html>

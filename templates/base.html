@@ -7,10 +7,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Poppins&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" defer></script>
-  <script src="{% static 'home/script.js' %}" defer></script>
   <link rel="stylesheet" href="{% static 'style.css' %}">
+  <script>
+    let user = "{{ request.user }}"
+
+    function getToken(name) {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+          const cookies = document.cookie.split(';');
+          for (let i = 0; i < cookies.length; i++) {
+              const cookie = cookies[i].trim();
+              // Does this cookie string begin with the name we want?
+              if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                  cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                  break;
+              }
+          }
+      }
+      return cookieValue;
+  }
+  const csrftoken = getToken('csrftoken');
+  </script>
   {% block header %}
   <title>ADD A HEAD BLOCK</title>
   {% endblock %}
@@ -40,10 +57,10 @@
             <li><a href="#" id="sign-in-link">Sign In</a></li>
           </div>
           <div class="nav-products">
-            <li><a href="#">Cameras</a></li>
-            <li><a href="#">Drones</a></li>
-            <li><a href="#">Recorders</a></li>
-            <li><a href="#">Lighting</a></li>
+            <a href="{% url 'product-camera' %}"><li>Cameras</li></a>
+            <a href="{% url 'product-drone' %}"><li>Drones</li></a>
+            <a href="{% url 'product-recorder' %}"><li>Recorders</li></a>
+            <a href="{% url 'product-lighting' %}"><li>Lighting</li></a>
             <img src="{% static 'imgs/Svg/Back.svg' %}" alt="an arrow icon" class="nav-back">
           </div>
           <div class="sign-in">
@@ -92,10 +109,10 @@
                       <a href="#">Products</a>
                       <div class="dropdown">
                         <ul>
-                            <li><a href="#">Cameras</a></li>
-                            <li><a href="#">Drones</a></li>
-                            <li><a href="#">Recorders</a></li>
-                            <li><a href="#">Lighting</a></li>
+                            <a href="{% url 'product-camera' %}"><li>Cameras</li></a>
+                            <a href="{% url 'product-drone' %}"><li>Drones</li></a>
+                            <a href="{% url 'product-recorder' %}"><li>Recorders</li></a>
+                            <a href="{% url 'product-lighting' %}"><li>Lighting</li></a>
                         </ul>
                       </div>
                       <div class="dropdown-arrow"></div>
@@ -106,12 +123,37 @@
             </div>
             <div class="nav-c1">
                 <img src="{% static 'imgs/Svg/user-regular.svg' %}" alt="a user" class="account-img">
-                <img href="{% url 'cart' %}" src="{% static 'imgs/Svg/cart.svg' %}" alt="a shopping cart" class="nav-c1-cart">
+                <a href="{% url 'cart' %}"><img src="{% static 'imgs/Svg/cart.svg' %}" alt="a shopping cart" class="nav-c1-cart"></a>
             </div>
           </div>
       </div>
     </nav>
   </header>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" defer></script>
+  <script src="{% static 'home/script.js' %}" defer></script>
+
+  <script>
+    const navD = document.querySelector(".nav-b");
+   
+    window.addEventListener("scroll", () => {
+      let windowPositionD = window.scrollY > 0;
+      navD.classList.toggle("nav-b-active", windowPositionD);
+    });
+
+    const nav = document.querySelector(".nav");
+   
+    window.addEventListener("scroll", () => {
+      let windowPosition = window.scrollY > 0;
+      nav.classList.toggle("scroll-nav", windowPosition);
+    });
+  </script>
+
   {% block content %}<h1>ADD A DAMN BLOCK CONTENT</h1>{% endblock %}
 </body>
 </html>
