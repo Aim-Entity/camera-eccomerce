@@ -28,8 +28,33 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
     digital = models.BooleanField(default=False, null=True, blank=False)
     offer = models.BooleanField(default=False, null=True, blank=False)
+    slug = models.SlugField(default="Change-me", max_length=300)
     product_type = models.CharField(choices=PRODUCT_TYPE,
                                     null=True, blank=True, default=PRODUCT_TYPE[-1], max_length=100)
+
+    detail_one = models.CharField(
+        max_length=2000, null=True, blank=False, default="Erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices tincidunt arcu non sodales neque. d donec ultrices tincidunt arcu non sodales neque. tincidunt arcu non sodales neque.")
+    title_one = models.CharField(
+        max_length=200, null=True, blank=False, default="The Best Quality Photos")
+    detail_two = models.CharField(
+        max_length=2000, null=True, blank=False, default="Erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices tincidunt arcu non sodales.")
+    title_two = models.CharField(
+        max_length=200, null=True, blank=False, default="Long Lasting Battery")
+    detail_three = models.CharField(
+        max_length=2000, null=True, blank=False, default="Erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices tincidunt arcu non sodales.")
+
+    weight = models.IntegerField(null=True, blank=True, default=175)
+    spec_type = models.CharField(
+        max_length=120, null=True, blank=True, default="Compact")
+
+    height = models.IntegerField(null=True, blank=True, default=100)
+    width = models.IntegerField(null=True, blank=True, default=100)
+    depth = models.IntegerField(null=True, blank=True, default=100)
+    pixels = models.FloatField(null=True, blank=True)
+    aspect_ratio = models.CharField(
+        max_length=40, null=True, blank=True, default="3:2")
+    colour_filter = models.CharField(
+        max_length=120, null=True, blank=True, default="Standard")
 
     def __str__(self):
         return self.name

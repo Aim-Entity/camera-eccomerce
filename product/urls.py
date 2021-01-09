@@ -8,5 +8,6 @@ urlpatterns = [
     path("product-recorder/", views.product_recorder, name="product-recorder"),
     path("product-lighting/", views.product_lighting, name="product-lighting"),
 
-    path("product/", views.product, name="product"),
+    path("product/<str:slug>", views.ProductDetailView.as_view(),
+         name="product-detail"),
 ]

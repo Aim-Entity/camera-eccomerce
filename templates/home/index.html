@@ -135,7 +135,7 @@
                         <div class="offers-info-d">
                            <h1>{{ p1.name }}</h1>
                            <h3>${{ p1.price|floatformat:2 }}</h3>
-                           <a href=""><button data-product="{{ p1.id }}" data-action="add" class="product-btn update-cart">Visit</button></a>
+                           <a href="{% url 'product-detail' p1.slug%}"><button class="product-btn">Visit</button></a>
                         </div>
                      </div>
                      <div class="offer-card-d">
@@ -145,7 +145,7 @@
                         <div class="offers-info-d">
                            <h1>{{ p2.name }}</h1>
                            <h3>${{ p2.price|floatformat:2 }}</h3>
-                           <a href=""><button data-product="{{ p2.id }}" data-action="add" class="product-btn update-cart">Visit</button></a>
+                           <a href="{% url 'product-detail' p2.slug%}"><button class="product-btn">Visit</button></a>
                         </div>
                      </div>
                      <div class="offer-card-d">
@@ -155,7 +155,7 @@
                         <div class="offers-info-d">
                            <h1>{{ p3.name }}</h1>
                            <h3>${{ p3.price|floatformat:2 }}</h3>
-                           <a href="#"><button data-product="{{ p3.id }}" data-action="add" class="product-btn update-cart">Visit</button></a>
+                           <a href="{% url 'product-detail' p3.slug%}"><button class="product-btn">Visit</button></a>
                         </div>
                      </div>
                   </div>
@@ -167,7 +167,7 @@
                         <div class="offers-info-d">
                            <h1>{{ p4.name }}</h1>
                            <h3>${{ p4.price|floatformat:2 }}</h3>
-                           <a href=""><button data-product="{{ product.id }}" data-action="add" class="product-btn update-cart">Visit</button></a>
+                           <a href="{% url 'product-detail' p4.slug%}"><button class="product-btn">Visit</button></a>
                         </div>
                      </div>
                      <div class="offer-card-d">
@@ -177,7 +177,7 @@
                         <div class="offers-info-d">
                            <h1>{{ p5.name }}</h1>
                            <h3>${{ p5.price|floatformat:2 }}</h3>
-                           <a href="" ><button data-product="{{ product.id }}" data-action="add" class="product-btn update-cart">Visit</button></a>
+                           <a href="{% url 'product-detail' p5.slug%}"><button class="product-btn">Visit</button></a>
                         </div>
                      </div>
                      <div class="offer-card-d">
@@ -187,7 +187,7 @@
                         <div class="offers-info-d">
                            <h1>{{ p6.name }}</h1>
                            <h3>${{ p6.price|floatformat:2 }}</h3>
-                           <a data-product="{{ product.id }}" data-action="add" class="update-cart"><button class="product-btn">Visit</button></a>
+                           <a href="{% url 'product-detail' p6.slug%}"><button class="product-btn">Visit</button></a>
                         </div>
                      </div>
                   </div>

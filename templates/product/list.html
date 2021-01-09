@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load product_extras %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,11 +26,13 @@
          <div class="section-3a">
             <div class="products">
                <div class="products-search">
-                  <input type="text" name="search" class="search-bar" placeholder="Search">
-                  <img src="{% static 'imgs/Svg/delete.svg' %}" alt="delete icon" class="delete">
-                  <button type="submit" class="search-button">Search</button>
+                  <form method="get" class="search-form">
+                     {{ filtered_products.form }}
+                     <img src="{% static 'imgs/Svg/delete.svg' %}" alt="delete icon" class="delete">
+                     <button type="submit" class="search-button">Search</button>
+                  </form>
                </div>
-               {% for product in products %}
+               {% for product in product_page_obj %}
                <div class="product-card">
                   <div class="product-img-p">
                      <img src="{{ product.image.url }}" alt="a camera" class="product-img">
@@ -37,11 +40,12 @@
                   <div class="product-info">
                      <h1>{{ product.name }}</h1>
                      <h3>${{ product.price|floatformat:2 }}</h3>
+                     <a href="{% url 'product-detail' product.slug%}"><button class="product-btn product-list-btn">Visit</button></a>
                   </div>
                </div>
                {% endfor %}
                <div class="product-card-d-p">
-                  {% for product in products %}
+                  {% for product in product_page_obj %}
                   <div class="product-card-d">
                      <div class="product-img-p">
                         <img src="{{ product.image.url }}" alt="a camera" class="product-img">
@@ -49,19 +53,30 @@
                      <div class="product-info">
                         <h1>{{ product.name }}</h1>
                         <h3>${{ product.price }}</h3>
-                        <a href="" ><button class="product-btn product-list-btn">Visit</button></a>
+                        <a href="{% url 'product-detail' product.slug%}"><button class="product-btn product-list-btn">Visit</button></a>
                      </div>
                   </div>
                   {% endfor %}
 
                </div>
                <div class="pagination">
-                  <img src="{% static 'imgs/Svg/caret-left-solid.svg' %}" alt="an arrow" class="pag-left">
-                  <h3>1</h3>
-                  <h3>2</h3>
-                  <h3>3</h3>
-                  <h3>...</h3>
-                  <img src="{% static 'imgs/Svg/caret-right-solid.svg' %}" alt="an arrow" class="pag-right">
+                  {% if product_page_obj.has_previous %}
+                     <a class="pag-num" href="{% my_url 1 'page' request.Get.urlencode %}">First</a>
+                     <a href="{% my_url product_page_obj.previous_page_number 'page' request.Get.urlencode %}"><img src="{% static 'imgs/Svg/caret-left-solid.svg' %}" alt="an arrow" class="pag-left"></a>
+                  {% endif %}
+
+                  {% for num in product_page_obj.paginator.page_range %}
+                     {% if product_page_obj.number == num %}
+                        <a class="pag-num" href="{% my_url num 'page' request.Get.urlencode %}">{{ num }}</a>
+                     {% elif num > product_page_obj.number|add:'-3' and num < product_page_obj.number|add:'3' %}
+                        <a class="pag-num" href="{% my_url num 'page' request.Get.urlencode %}">{{ num }}</a>
+                     {% endif %}
+                  {% endfor %}
+
+                  {% if product_page_obj.has_next %}
+                     <a href="{% my_url product_page_obj.next_page_number 'page' request.Get.urlencode %}"><img src="{% static 'imgs/Svg/caret-right-solid.svg' %}" alt="an arrow" class="pag-right"></a>
+                     <a class="pag-num" href="{% my_url page_obj.paginator.num_pages 'page' request.Get.urlencode %}">Last</a>
+                  {% endif %}
                </div>
             </div>
          </div>
@@ -90,6 +105,10 @@
    </div>
 
    <script>
+      input = document.querySelector(".search-form").children[1]
+      input.classList.add("search-bar")
+      input.placeholder = "Search"
+
       const burger = document.querySelector(".burger-menu");
       const burgerMenu = document.querySelector(".nav-menu");
 

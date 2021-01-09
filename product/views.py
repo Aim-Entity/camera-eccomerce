@@ -1,18 +1,31 @@
 from django.shortcuts import render
-from .models import *
+from product.models import *
+from django.views.generic import ListView, DetailView
+from django.core.paginator import Paginator
+from product.filters import ProductFilter
 
 
-def product(request):
-    context = {
-
-    }
-    return render(request, "product/product.html", context)
+class ProductDetailView(DetailView):
+    template_name = "product/product.html"
+    model = Product
+    context_object_name = "product"
 
 
 def product_list(request):
     products = Product.objects.all()
+    filtered_products = ProductFilter(
+        request.GET,
+        queryset=Product.objects.all()
+    )
+
+    paginated_filtered_products = Paginator(filtered_products.qs, 9)
+    page_number = request.GET.get("page")
+    product_page_obj = paginated_filtered_products.get_page(page_number)
+
     context = {
         "products": products,
+        "filtered_products": filtered_products,
+        "product_page_obj": product_page_obj
     }
     return render(request, "product/list.html", context)
 

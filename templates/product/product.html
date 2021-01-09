@@ -16,12 +16,12 @@
       <section>
          <div class="section-2p">
             <div class="lp-p">
-               <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="lp-p-img">
+               <img src="{{ product.imageURL }}" alt="a camera" class="lp-p-img">
                <div class="lp-p-info">
                   <div class="lp-p-1">
-                     <h1>Product Name</h1>
-                     <h2>$69.99</h2>
-                     <button type="button">Add To Cart</button>
+                     <h1>{{ product.name|title }}</h1>
+                     <h2>${{ product.price|floatformat:2 }}</h2>
+                     <button class="update-cart" data-product="{{ product.id }}" data-action="add" type="button">Add To Cart</button>
                   </div>
                   <div class="lp-p-sep"></div>
                   <div class="lp-p-2">
@@ -41,9 +41,9 @@
       <section>
          <div class="section-3p">
             <div class="quality">
-               <h1>Excelent Quality & Price</h1>
+               <h1>Excellent Quality & Price</h1>
                <div class="quality-sep"></div>
-               <p>Erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices tincidunt arcu non sodales neque. d donec ultrices tincidunt arcu non sodales neque. tincidunt arcu non sodales neque.</p>
+               <p>{{ product.detail_one }}</p>
                <button type="button" class="quality-button">Our Reviews</button>
             </div>
          </div>
@@ -51,10 +51,10 @@
       <section>
          <div class="section-4p">
             <div class="details">
-               <h1>The Best Quality Photos</h1>
+               <h1>{{ product.title_one|title }}</h1>
                <div class="details-sep"></div>
-               <p>Erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices tincidunt arcu non sodales.</p>
-               <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="details-img">
+               <p>{{ product.detail_two }}</p>
+               <img src="{{ product.imageURL }}" alt="a camera" class="details-img">
             </div>
          </div>
       </section>
@@ -62,13 +62,13 @@
          <div class="section-5p">
             <div class="battery-p">
                <div class="battery">
-                  <h1>Long Lasting Battery</h1>
+                  <h1>{{ product.title_two|title }}</h1>
                   <div class="battery-sep"></div>
-                  <p>Erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices tincidunt arcu non sodales.</p>
-                  <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="battery-img">
+                  <p>{{ product.detail_three }}</p>
+                  <img src="{{ product.imageURL }}" alt="a camera" class="battery-img">
                </div>
                <div class="battery-img-p">
-                  <img src="{% static 'imgs/Png/camera-product-min.png' %}" alt="a camera" class="battery-img-d">
+                  <img src="{{ product.imageURL }}" alt="a camera" class="battery-img-d">
                </div>
             </div>
          </div>
@@ -82,12 +82,12 @@
                </div>
                <div class="specs-1">
                   <div class="specs-1-1line">
-                     <h1 class="specs-1a">750 Grams</h1>
+                     <h1 class="specs-1a">{{ product.weight }} Grams</h1>
                      <h3 class="specs-1b">Weight</h3>
                   </div>
                   <div class="specs-1-sep1"></div>
                   <div class="specs-1-2line">
-                     <h1 class="specs-1c">Compact</h1>
+                     <h1 class="specs-1c">{{ product.spec_type }}</h1>
                      <h3 class="specs-1d">Type</h3>
                   </div>
                   <div class="specs-1-sep2"></div>
@@ -100,24 +100,24 @@
                <div class="specifications-grid">
                   <div class="specs-2">
                      <h1 class="specs-title2">Physical Specifications</h1>
-                     <h2 class="specs-2a">Height: 100mm</h2>
+                     <h2 class="specs-2a">Height: {{ product.height }}mm</h2>
                      <div class="specs-2-sep1"></div>
-                     <h2 class="specs-2b">Width: 150mm</h2>
+                     <h2 class="specs-2b">Width: {{ product.width }}mm</h2>
                      <div class="specs-2-sep2"></div>
-                     <h2 class="specs-2c">Depth: 145mm</h2>
+                     <h2 class="specs-2c">Depth: {{ product.depth }}mm</h2>
                      <div class="specs-2-sep3"></div>
-                     <h2 class="specs-2d">Weight: 750g</h2>
+                     <h2 class="specs-2d">Weight: {{ product.weight }}g</h2>
                      <div class="specs-2-sep4"></div>
                   </div>
                   <div class="specs-3">
                      <h1 class="specs-title3">Technical Specifications</h1>
-                     <h2 class="specs-3a">Compact Camera</h2>
+                     <h2 class="specs-3a">{{ product.spec_type }} Camera</h2>
                      <div class="specs-3-sep1"></div>
-                     <h2 class="specs-3b">Pixels: 26.5 Megapixels</h2>
+                     <h2 class="specs-3b">Pixels: {{ product.pixels }} Megapixels</h2>
                      <div class="specs-3-sep2"></div>
-                     <h2 class="specs-3c">Aspect Ratio: 3:2 (Horizontal:Vertical)</h2>
+                     <h2 class="specs-3c">Aspect Ratio: {{ product.aspect_ratio }} (Horizontal:Vertical)</h2>
                      <div class="specs-3-sep3"></div>
-                     <h2 class="specs-3d">Color Filter System: RGB color filters</h2>
+                     <h2 class="specs-3d">Color Filter System: {{ product.colour_filter }}</h2>
                      <div class="specs-3-sep4"></div>
                   </div>
                </div>
@@ -248,6 +248,49 @@
             signIn.classList.add("sign-in-active");
             signUp.classList.remove("sign-up-active");
          });
+
+         function updating_cart() {
+            let updateBtns = document.querySelectorAll(".update-cart")
+         
+            for(let i = 0; i < updateBtns.length; i++){
+             updateBtns[i].addEventListener("click", function() {
+               let productId = this.dataset.product
+               let action = this.dataset.action
+               console.log("ProductId", productId, "Action", action)
+         
+               if(user === "AnonymousUser"){
+                  console.log("Not logged in")
+               }
+               else{
+                  updateUserOrder(productId, action)
+                 }
+             })
+             }
+         
+             function updateUserOrder(productId, action){
+               console.log("User is logged in, sending data...")
+         
+               let url = "/update_item/"
+         
+               fetch(url, {
+                  method: "POST",
+                  headers: {
+                     "Content-Type": "application/json",
+                     "X-CSRFToken": csrftoken
+                  },
+                  body: JSON.stringify({"productId": productId, "action": action})
+               })
+               .then((response) => {
+                  return response.json()
+               })
+               .then((data) => {
+                  console.log("Data", data)
+                  location.reload()
+               })
+            }
+         }
+   
+         updating_cart()
    </script>
    {% endblock %}
 </body>

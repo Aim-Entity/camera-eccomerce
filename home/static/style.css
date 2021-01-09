@@ -968,6 +968,16 @@ input {
   margin-top: 4.5rem;
 }
 
+.search-form {
+  display: flex;
+  width: 100%;
+  height: 3rem;
+}
+
+.search-form label {
+  display: none;
+}
+
 .search-bar {
   all: initial;
 }
@@ -1013,11 +1023,16 @@ input {
 
 .pagination {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 50%;
+  width: 65%;
   height: 2rem;
   margin-top: 3.5rem;
+}
+
+.pag-num {
+  color: #000;
+  text-decoration: none;
 }
 
 .pag-left {
@@ -1056,6 +1071,7 @@ input {
   width: 13.05rem;
   height: 8.5rem;
   margin-top: 4.25rem;
+  object-fit: cover;
 }
 
 .lp-p-1 {
@@ -1185,6 +1201,7 @@ input {
   width: 13.05rem;
   height: 8.5rem;
   margin-top: 4.75rem;
+  object-fit: cover;
 }
 
 .details h1 {
@@ -3559,6 +3576,16 @@ input {
     margin-top: 4.5rem;
   }
 
+  .search-form {
+    display: flex;
+    width: 100%;
+    height: 3rem;
+  }
+
+  .search-form label {
+    display: none;
+  }
+
   .search-bar {
     all: initial;
   }
@@ -3605,11 +3632,16 @@ input {
 
   .pagination {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 50%;
+    width: 25%;
     height: 2rem;
     margin-top: 3.5rem;
+  }
+
+  .pag-num {
+    color: #000;
+    text-decoration: none;
   }
 
   .pag-left {
@@ -3651,6 +3683,8 @@ input {
 
   .lp-p-img {
     margin-left: 23.35%;
+    width: 448px;
+    object-fit: cover;
   }
 
   .lp-p-1 {
@@ -3787,6 +3821,7 @@ input {
     width: 23rem;
     height: 14rem;
     margin-top: 4.75rem;
+    object-fit: cover;
   }
 
   .details h1 {
@@ -3864,6 +3899,7 @@ input {
     width: 24.5rem;
     height: 15rem;
     margin-top: 0rem;
+    object-fit: cover;
     transform: rotate(-41deg);
   }
 
