@@ -45,10 +45,11 @@
                      </div>
                   </div>
                   <div class="c-input">
-                     <input type="text" name="name" id="c-name" placeholder="Full Name" required>
-                     <input type="email" name="email" id="c-email" placeholder="Email Address" required>
-                     <textarea name="message" id="c-msg" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                     <button type="submit">Send Message</button>
+                     <form method="POST" id="form">
+                        {% csrf_token %}
+                        {{ contact }}
+                        <button type="submit">Send Message</button>
+                     </form>
                   </div>
                </div>
             </div>

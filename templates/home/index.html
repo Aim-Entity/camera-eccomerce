@@ -27,7 +27,7 @@
                <h1>What We Offer</h1>
                <div class="wwo-sep"></div>
                <p>Erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices tincidunt arcu non sodales neque. d donec ultrices tincidunt arcu non sodales neque.</p>
-               <button type="button" class="wwo-button">Our stock</button>
+               <a href="{% url 'product-list' %}"><button type="button" class="wwo-button">Our stock</button></a>
             </div>
          </div>
       </section>
@@ -65,7 +65,7 @@
                   <div class="offers-info">
                      <h1>{{ p1.name }}</h1>
                      <h3>${{ p1.price|floatformat:2 }}</h3>
-                     <a href=""><button data-product="{{ product.id }}" data-action="add" class="product-btn update-cart">Visit</button></a>
+                     <a href="{% url 'product-detail' p1.slug%}"><button class="product-btn">Visit</button></a>
                   </div>
                </div>
                <div class="offer-card">
@@ -75,7 +75,7 @@
                   <div class="offers-info">
                      <h1>{{ p2.name }}</h1>
                      <h3>${{ p2.price|floatformat:2 }}</h3>
-                     <a href=""><button data-product="{{ product.id }}" data-action="add" class="product-btn update-cart">Visit</button></a>
+                     <a href="{% url 'product-detail' p2.slug%}"><button class="product-btn">Visit</button></a>
                   </div>
                </div>
                <div class="offer-card">
@@ -85,7 +85,7 @@
                   <div class="offers-info">
                      <h1>{{ p3.name }}</h1>
                      <h3>${{ p3.price|floatformat:2 }}</h3>
-                     <a href=""><button data-product="{{ product.id }}" data-action="add" class="product-btn update-cart">Visit</button></a>
+                     <a href="{% url 'product-detail' p3.slug%}"><button class="product-btn">Visit</button></a>
                   </div>
                </div>
                <div class="offer-card">
@@ -95,7 +95,7 @@
                   <div class="offers-info">
                      <h1>{{ p4.name }}</h1>
                      <h3>${{ p4.price|floatformat:2 }}</h3>
-                     <a href=""><button data-product="{{ product.id }}" data-action="add" class="product-btn update-cart">Visit</button></a>
+                     <a href="{% url 'product-detail' p4.slug%}"><button class="product-btn">Visit</button></a>
                   </div>
                </div>
                <div class="offer-card">
@@ -105,7 +105,7 @@
                   <div class="offers-info">
                      <h1>{{ p5.name }}</h1>
                      <h3>${{ p5.price|floatformat:2 }}</h3>
-                     <a href=""><button data-product="{{ product.id }}" data-action="add" class="product-btn update-cart">Visit</button></a>
+                     <a href="{% url 'product-detail' p5.slug%}"><button class="product-btn">Visit</button></a>
                   </div>
                </div>
                <div class="offer-card">
@@ -115,10 +115,10 @@
                   <div class="offers-info">
                      <h1>{{ p6.name }}</h1>
                      <h3>${{ p6.price|floatformat:2 }}</h3>
-                     <a href=""><button data-product="{{ product.id }}" data-action="add" class="product-btn update-cart">Visit</button></a>
+                     <a href="{% url 'product-detail' p6.slug%}"><button class="product-btn">Visit</button></a>
                   </div>
                </div>
-               <h2 class="view-more-offers"><a href="#" class="view-more-link">View More</a></h2>
+               <h2 class="view-more-offers"><a href="{% url 'product-list' %}" class="view-more-link">View More</a></h2>
             </div>
          </div>
       </section>
@@ -192,7 +192,7 @@
                      </div>
                   </div>
                </div>
-               <h2 class="view-more-offers-d"><a href="#" class="view-more-link-d">View More</a></h2>
+               <h2 class="view-more-offers-d"><a href="{% url 'product-list' %}" class="view-more-link-d">View More</a></h2>
             </div>
          </div>
       </section>

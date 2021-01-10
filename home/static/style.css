@@ -4442,7 +4442,7 @@ input {
     height: 20rem;
     grid-template-columns: 70% 30%;
     grid-template-rows: 1fr;
-    margin-top: 20%;
+    margin-top: 35%;
   }
 
   .cart-recap {
